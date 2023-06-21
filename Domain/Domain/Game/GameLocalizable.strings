@@ -1,0 +1,13 @@
+/* 
+  GameLocalizable.strings
+  Domain
+
+  Created by Jaime Alexander Uribe Uribe - Ceiba Software on 21/06/23.
+  
+*/
+
+// MARK: -Exceptions
+"unexpectedError" = "Ocurrió un error al obtener los video juegos";
+"negativeNumber" = "la identificación del video Juego no puede ser negativo o vacio.";
+"emptyGameList" = "La lista de viedo juegos está vacía.";
+"emptyGame" = "El video Juego no existe";

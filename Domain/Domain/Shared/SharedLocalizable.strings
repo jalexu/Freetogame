@@ -1,0 +1,10 @@
+/* 
+  SharedLocalizable.strings
+  Domain
+
+  Created by Jaime Alexander Uribe Uribe - Ceiba Software on 21/06/23.
+  
+*/
+
+// MARK: -Exceptions
+"emptyParam" = "%@ cannot be empty.";

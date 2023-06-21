@@ -10,6 +10,7 @@
 		E426671B2A4305E600CF601B /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42667122A4305E500CF601B /* Infrastructure.framework */; };
 		E42667202A4305E600CF601B /* InfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426671F2A4305E600CF601B /* InfrastructureTests.swift */; };
 		E42667212A4305E600CF601B /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = E42667152A4305E500CF601B /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E42667352A430B7A00CF601B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667342A430B7A00CF601B /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 		E42667152A4305E500CF601B /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		E426671A2A4305E600CF601B /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E426671F2A4305E600CF601B /* InfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureTests.swift; sourceTree = "<group>"; };
+		E42667342A430B7A00CF601B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		E42667142A4305E500CF601B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				E42667302A430AC300CF601B /* Game */,
 				E42667152A4305E500CF601B /* Infrastructure.h */,
 			);
 			path = Infrastructure;
@@ -80,6 +83,38 @@
 				E426671F2A4305E600CF601B /* InfrastructureTests.swift */,
 			);
 			path = InfrastructureTests;
+			sourceTree = "<group>";
+		};
+		E42667302A430AC300CF601B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E42667312A430B3D00CF601B /* HttpClient */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		E42667312A430B3D00CF601B /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				E42667322A430B4C00CF601B /* Dto */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		E42667322A430B4C00CF601B /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				E42667332A430B6200CF601B /* Game */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		E42667332A430B6200CF601B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E42667342A430B7A00CF601B /* Game.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +179,7 @@
 				TargetAttributes = {
 					E42667112A4305E500CF601B = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					E42667192A4305E600CF601B = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -191,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42667352A430B7A00CF601B /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +373,7 @@
 		E42667252A4305E600CF601B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -357,15 +395,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaime.uribe.Infrastructure;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E42667262A4305E600CF601B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -387,15 +430,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaime.uribe.Infrastructure;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		E42667282A4305E600CF601B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -411,6 +458,7 @@
 		E42667292A4305E600CF601B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
