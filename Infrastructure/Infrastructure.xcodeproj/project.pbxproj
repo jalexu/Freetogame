@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E426671B2A4305E600CF601B /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42667122A4305E500CF601B /* Infrastructure.framework */; };
-		E42667202A4305E600CF601B /* InfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426671F2A4305E600CF601B /* InfrastructureTests.swift */; };
 		E42667212A4305E600CF601B /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = E42667152A4305E500CF601B /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42667352A430B7A00CF601B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667342A430B7A00CF601B /* Game.swift */; };
 		E42667AC2A432FC500CF601B /* HttpClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667AB2A432FC500CF601B /* HttpClientRequest.swift */; };
@@ -16,6 +15,21 @@
 		E42667B22A43318100CF601B /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667B12A43318100CF601B /* URLSession+Extension.swift */; };
 		E42667B42A4331A000CF601B /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667B32A4331A000CF601B /* HttpClient.swift */; };
 		E42667B72A4331F100CF601B /* HttpClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667B62A4331F100CF601B /* HttpClientError.swift */; };
+		E42667BB2A4345F000CF601B /* GetGamesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667BA2A4345F000CF601B /* GetGamesRequest.swift */; };
+		E42667BE2A4347DA00CF601B /* GameRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667BD2A4347DA00CF601B /* GameRemoteRepository.swift */; };
+		E42667C02A4348BB00CF601B /* GameAlamofireRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667BF2A4348BB00CF601B /* GameAlamofireRepository.swift */; };
+		E42667C42A4349F300CF601B /* GameTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667C32A4349F300CF601B /* GameTranslator.swift */; };
+		E42667C62A434E6700CF601B /* GameProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667C52A434E6700CF601B /* GameProxy.swift */; };
+		E42667C92A434EB500CF601B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42667C82A434EB500CF601B /* Domain.framework */; };
+		E42667CA2A434EB500CF601B /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E42667C82A434EB500CF601B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E42667CE2A43557100CF601B /* NetworkVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667CD2A43557100CF601B /* NetworkVerify.swift */; };
+		E42667D02A43578100CF601B /* LocalizationFramework+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667CF2A43578100CF601B /* LocalizationFramework+Bundle.swift */; };
+		E42667D22A4357DE00CF601B /* LocalizedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667D12A4357DE00CF601B /* LocalizedHelper.swift */; };
+		E42667D42A43591400CF601B /* TechnicalException.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667D32A43591400CF601B /* TechnicalException.swift */; };
+		E42667D82A4359CD00CF601B /* InfrastructureLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E42667D72A4359CD00CF601B /* InfrastructureLocalizable.strings */; };
+		E42667DB2A435EDB00CF601B /* GameProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667DA2A435EDB00CF601B /* GameProxyTests.swift */; };
+		E42667DE2A435FD700CF601B /* StubNetworkVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667DD2A435FD700CF601B /* StubNetworkVerify.swift */; };
+		E42667E02A43606200CF601B /* StubGameRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667DF2A43606200CF601B /* StubGameRemoteRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,16 +42,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E42667CB2A434EB500CF601B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E42667CA2A434EB500CF601B /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E42667122A4305E500CF601B /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42667152A4305E500CF601B /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		E426671A2A4305E600CF601B /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E426671F2A4305E600CF601B /* InfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureTests.swift; sourceTree = "<group>"; };
 		E42667342A430B7A00CF601B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		E42667AB2A432FC500CF601B /* HttpClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientRequest.swift; sourceTree = "<group>"; };
 		E42667B12A43318100CF601B /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		E42667B32A4331A000CF601B /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		E42667B62A4331F100CF601B /* HttpClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientError.swift; sourceTree = "<group>"; };
+		E42667BA2A4345F000CF601B /* GetGamesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGamesRequest.swift; sourceTree = "<group>"; };
+		E42667BD2A4347DA00CF601B /* GameRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRemoteRepository.swift; sourceTree = "<group>"; };
+		E42667BF2A4348BB00CF601B /* GameAlamofireRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAlamofireRepository.swift; sourceTree = "<group>"; };
+		E42667C32A4349F300CF601B /* GameTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTranslator.swift; sourceTree = "<group>"; };
+		E42667C52A434E6700CF601B /* GameProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProxy.swift; sourceTree = "<group>"; };
+		E42667C82A434EB500CF601B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42667CD2A43557100CF601B /* NetworkVerify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkVerify.swift; sourceTree = "<group>"; };
+		E42667CF2A43578100CF601B /* LocalizationFramework+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalizationFramework+Bundle.swift"; sourceTree = "<group>"; };
+		E42667D12A4357DE00CF601B /* LocalizedHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedHelper.swift; sourceTree = "<group>"; };
+		E42667D32A43591400CF601B /* TechnicalException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalException.swift; sourceTree = "<group>"; };
+		E42667D72A4359CD00CF601B /* InfrastructureLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfrastructureLocalizable.strings; sourceTree = "<group>"; };
+		E42667DA2A435EDB00CF601B /* GameProxyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProxyTests.swift; sourceTree = "<group>"; };
+		E42667DD2A435FD700CF601B /* StubNetworkVerify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubNetworkVerify.swift; sourceTree = "<group>"; };
+		E42667DF2A43606200CF601B /* StubGameRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubGameRemoteRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42667C92A434EB500CF601B /* Domain.framework in Frameworks */,
 				E42667AF2A43311F00CF601B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +108,7 @@
 				E42667142A4305E500CF601B /* Infrastructure */,
 				E426671E2A4305E600CF601B /* InfrastructureTests */,
 				E42667132A4305E500CF601B /* Products */,
+				E42667C72A434EB500CF601B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,7 +134,7 @@
 		E426671E2A4305E600CF601B /* InfrastructureTests */ = {
 			isa = PBXGroup;
 			children = (
-				E426671F2A4305E600CF601B /* InfrastructureTests.swift */,
+				E42667D92A435EB100CF601B /* Game */,
 			);
 			path = InfrastructureTests;
 			sourceTree = "<group>";
@@ -99,6 +142,8 @@
 		E42667302A430AC300CF601B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				E42667C12A43499400CF601B /* Anticurruption */,
+				E42667B82A43458D00CF601B /* Repository */,
 				E42667322A430B4C00CF601B /* Dto */,
 			);
 			path = Game;
@@ -107,22 +152,17 @@
 		E42667322A430B4C00CF601B /* Dto */ = {
 			isa = PBXGroup;
 			children = (
-				E42667332A430B6200CF601B /* Game */,
-			);
-			path = Dto;
-			sourceTree = "<group>";
-		};
-		E42667332A430B6200CF601B /* Game */ = {
-			isa = PBXGroup;
-			children = (
 				E42667342A430B7A00CF601B /* Game.swift */,
 			);
-			path = Game;
+			path = Dto;
 			sourceTree = "<group>";
 		};
 		E42667A92A432F6200CF601B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E42667D52A43599800CF601B /* Localizable */,
+				E42667B52A4331DE00CF601B /* Exception */,
+				E42667CC2A43555800CF601B /* Network */,
 				E42667AA2A432F7500CF601B /* HttpClient */,
 			);
 			path = Shared;
@@ -131,10 +171,9 @@
 		E42667AA2A432F7500CF601B /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
-				E42667B52A4331DE00CF601B /* Exception */,
-				E42667B02A43315B00CF601B /* Extension */,
 				E42667AB2A432FC500CF601B /* HttpClientRequest.swift */,
 				E42667B32A4331A000CF601B /* HttpClient.swift */,
+				E42667B02A43315B00CF601B /* Extension */,
 			);
 			path = HttpClient;
 			sourceTree = "<group>";
@@ -151,8 +190,88 @@
 			isa = PBXGroup;
 			children = (
 				E42667B62A4331F100CF601B /* HttpClientError.swift */,
+				E42667D12A4357DE00CF601B /* LocalizedHelper.swift */,
+				E42667D32A43591400CF601B /* TechnicalException.swift */,
 			);
 			path = Exception;
+			sourceTree = "<group>";
+		};
+		E42667B82A43458D00CF601B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E42667BC2A4347BB00CF601B /* Contracts */,
+				E42667B92A4345D200CF601B /* Request */,
+				E42667BF2A4348BB00CF601B /* GameAlamofireRepository.swift */,
+				E42667C52A434E6700CF601B /* GameProxy.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E42667B92A4345D200CF601B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				E42667BA2A4345F000CF601B /* GetGamesRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E42667BC2A4347BB00CF601B /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				E42667BD2A4347DA00CF601B /* GameRemoteRepository.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		E42667C12A43499400CF601B /* Anticurruption */ = {
+			isa = PBXGroup;
+			children = (
+				E42667C32A4349F300CF601B /* GameTranslator.swift */,
+			);
+			path = Anticurruption;
+			sourceTree = "<group>";
+		};
+		E42667C72A434EB500CF601B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E42667C82A434EB500CF601B /* Domain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E42667CC2A43555800CF601B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E42667CD2A43557100CF601B /* NetworkVerify.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E42667D52A43599800CF601B /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				E42667CF2A43578100CF601B /* LocalizationFramework+Bundle.swift */,
+				E42667D72A4359CD00CF601B /* InfrastructureLocalizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		E42667D92A435EB100CF601B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E42667DC2A435FC400CF601B /* Stubs */,
+				E42667DA2A435EDB00CF601B /* GameProxyTests.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		E42667DC2A435FC400CF601B /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				E42667DD2A435FD700CF601B /* StubNetworkVerify.swift */,
+				E42667DF2A43606200CF601B /* StubGameRemoteRepository.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +296,7 @@
 				E426670E2A4305E500CF601B /* Sources */,
 				E426670F2A4305E500CF601B /* Frameworks */,
 				E42667102A4305E500CF601B /* Resources */,
+				E42667CB2A434EB500CF601B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42667D82A4359CD00CF601B /* InfrastructureLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +392,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42667C42A4349F300CF601B /* GameTranslator.swift in Sources */,
+				E42667D42A43591400CF601B /* TechnicalException.swift in Sources */,
+				E42667D02A43578100CF601B /* LocalizationFramework+Bundle.swift in Sources */,
 				E42667AC2A432FC500CF601B /* HttpClientRequest.swift in Sources */,
+				E42667CE2A43557100CF601B /* NetworkVerify.swift in Sources */,
 				E42667352A430B7A00CF601B /* Game.swift in Sources */,
+				E42667C02A4348BB00CF601B /* GameAlamofireRepository.swift in Sources */,
 				E42667B42A4331A000CF601B /* HttpClient.swift in Sources */,
 				E42667B72A4331F100CF601B /* HttpClientError.swift in Sources */,
+				E42667C62A434E6700CF601B /* GameProxy.swift in Sources */,
+				E42667BB2A4345F000CF601B /* GetGamesRequest.swift in Sources */,
+				E42667D22A4357DE00CF601B /* LocalizedHelper.swift in Sources */,
 				E42667B22A43318100CF601B /* URLSession+Extension.swift in Sources */,
+				E42667BE2A4347DA00CF601B /* GameRemoteRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +413,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E42667202A4305E600CF601B /* InfrastructureTests.swift in Sources */,
+				E42667DB2A435EDB00CF601B /* GameProxyTests.swift in Sources */,
+				E42667DE2A435FD700CF601B /* StubNetworkVerify.swift in Sources */,
+				E42667E02A43606200CF601B /* StubGameRemoteRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
