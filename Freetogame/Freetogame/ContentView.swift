@@ -7,13 +7,23 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView<ViewModel>: View where ViewModel: MovieDetailViewModelObservable {
+    
+    @ObservedObject private var viewModel: ViewModel
+    
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+                .onAppear {
+                    viewModel.getGames()
+                }
         }
         .padding()
     }
@@ -21,6 +31,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: DependencyInjectionContainer.shared.resolve(GameListViewModel.self)!)
     }
 }

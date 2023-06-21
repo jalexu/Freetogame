@@ -10,6 +10,10 @@
 		E419CE562A437C2B00399F79 /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE552A437C2B00399F79 /* GameListViewModel.swift */; };
 		E419CE592A43807D00399F79 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE582A43807D00399F79 /* ViewModelState.swift */; };
 		E419CE5B2A43819600399F79 /* GameListViewModelObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE5A2A43819600399F79 /* GameListViewModelObservable.swift */; };
+		E419CE5E2A4395AA00399F79 /* DependencyInjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE5D2A4395AA00399F79 /* DependencyInjectionContainer.swift */; };
+		E419CE612A43968B00399F79 /* GameListDependencyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE602A43968B00399F79 /* GameListDependencyAssembler.swift */; };
+		E419CE642A43995600399F79 /* GameDependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE632A43995600399F79 /* GameDependencyInjection.swift */; };
+		E419CE6A2A439B2800399F79 /* InfrastructureDependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE692A439B2800399F79 /* InfrastructureDependencyInjection.swift */; };
 		E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BC2A4304F000CF601B /* FreetogameApp.swift */; };
 		E42666BF2A4304F000CF601B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BE2A4304F000CF601B /* ContentView.swift */; };
 		E42666C12A4304F100CF601B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42666C02A4304F100CF601B /* Assets.xcassets */; };
@@ -51,6 +55,10 @@
 		E419CE552A437C2B00399F79 /* GameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
 		E419CE582A43807D00399F79 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		E419CE5A2A43819600399F79 /* GameListViewModelObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModelObservable.swift; sourceTree = "<group>"; };
+		E419CE5D2A4395AA00399F79 /* DependencyInjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionContainer.swift; sourceTree = "<group>"; };
+		E419CE602A43968B00399F79 /* GameListDependencyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListDependencyAssembler.swift; sourceTree = "<group>"; };
+		E419CE632A43995600399F79 /* GameDependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDependencyInjection.swift; sourceTree = "<group>"; };
+		E419CE692A439B2800399F79 /* InfrastructureDependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureDependencyInjection.swift; sourceTree = "<group>"; };
 		E42666B92A4304F000CF601B /* Freetogame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freetogame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42666BC2A4304F000CF601B /* FreetogameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetogameApp.swift; sourceTree = "<group>"; };
 		E42666BE2A4304F000CF601B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 		E419CE522A437BCE00399F79 /* GameList */ = {
 			isa = PBXGroup;
 			children = (
+				E419CE5F2A43963C00399F79 /* DependencyAssembler */,
 				E419CE542A437BE600399F79 /* View */,
 				E419CE532A437BDE00399F79 /* ViewModel */,
 			);
@@ -124,6 +133,40 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		E419CE5C2A43958300399F79 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE682A439B1100399F79 /* InfrastructureDependencyInjection */,
+				E419CE622A4398DB00399F79 /* GameDependencyInjection */,
+				E419CE5D2A4395AA00399F79 /* DependencyInjectionContainer.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		E419CE5F2A43963C00399F79 /* DependencyAssembler */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE602A43968B00399F79 /* GameListDependencyAssembler.swift */,
+			);
+			path = DependencyAssembler;
+			sourceTree = "<group>";
+		};
+		E419CE622A4398DB00399F79 /* GameDependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE632A43995600399F79 /* GameDependencyInjection.swift */,
+			);
+			path = GameDependencyInjection;
+			sourceTree = "<group>";
+		};
+		E419CE682A439B1100399F79 /* InfrastructureDependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE692A439B2800399F79 /* InfrastructureDependencyInjection.swift */,
+			);
+			path = InfrastructureDependencyInjection;
+			sourceTree = "<group>";
+		};
 		E42666B02A4304EF00CF601B = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +189,7 @@
 		E42666BB2A4304F000CF601B /* Freetogame */ = {
 			isa = PBXGroup;
 			children = (
+				E419CE5C2A43958300399F79 /* DependencyInjection */,
 				E42666C02A4304F100CF601B /* Assets.xcassets */,
 				E42666BE2A4304F000CF601B /* ContentView.swift */,
 				E42666BC2A4304F000CF601B /* FreetogameApp.swift */,
@@ -288,11 +332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E419CE5E2A4395AA00399F79 /* DependencyInjectionContainer.swift in Sources */,
 				E419CE592A43807D00399F79 /* ViewModelState.swift in Sources */,
 				E42666BF2A4304F000CF601B /* ContentView.swift in Sources */,
 				E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */,
+				E419CE642A43995600399F79 /* GameDependencyInjection.swift in Sources */,
 				E419CE5B2A43819600399F79 /* GameListViewModelObservable.swift in Sources */,
+				E419CE612A43968B00399F79 /* GameListDependencyAssembler.swift in Sources */,
 				E419CE562A437C2B00399F79 /* GameListViewModel.swift in Sources */,
+				E419CE6A2A439B2800399F79 /* InfrastructureDependencyInjection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E419CE672A439ABC00399F79 /* HttpClientAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE662A439ABC00399F79 /* HttpClientAssembler.swift */; };
+		E419CE6E2A439B8500399F79 /* NetworkVerifyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE6D2A439B8500399F79 /* NetworkVerifyAssembler.swift */; };
+		E419CE712A439C8700399F79 /* GameAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE702A439C8700399F79 /* GameAssembler.swift */; };
 		E426671B2A4305E600CF601B /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42667122A4305E500CF601B /* Infrastructure.framework */; };
 		E42667212A4305E600CF601B /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = E42667152A4305E500CF601B /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42667352A430B7A00CF601B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667342A430B7A00CF601B /* Game.swift */; };
@@ -58,6 +61,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E419CE662A439ABC00399F79 /* HttpClientAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientAssembler.swift; sourceTree = "<group>"; };
+		E419CE6D2A439B8500399F79 /* NetworkVerifyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkVerifyAssembler.swift; sourceTree = "<group>"; };
+		E419CE702A439C8700399F79 /* GameAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssembler.swift; sourceTree = "<group>"; };
 		E42667122A4305E500CF601B /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42667152A4305E500CF601B /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		E426671A2A4305E600CF601B /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +110,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E419CE652A439A9100399F79 /* DependencyAssambler */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE662A439ABC00399F79 /* HttpClientAssembler.swift */,
+			);
+			path = DependencyAssambler;
+			sourceTree = "<group>";
+		};
+		E419CE6B2A439B6400399F79 /* DependencyAssambler */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE6D2A439B8500399F79 /* NetworkVerifyAssembler.swift */,
+			);
+			path = DependencyAssambler;
+			sourceTree = "<group>";
+		};
+		E419CE6F2A439C5100399F79 /* DependencyAssambler */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE702A439C8700399F79 /* GameAssembler.swift */,
+			);
+			path = DependencyAssambler;
+			sourceTree = "<group>";
+		};
 		E42667082A4305E500CF601B = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +174,7 @@
 		E42667302A430AC300CF601B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				E419CE6F2A439C5100399F79 /* DependencyAssambler */,
 				E42667C12A43499400CF601B /* Anticurruption */,
 				E42667322A430B4C00CF601B /* Dto */,
 				E42667B82A43458D00CF601B /* Repository */,
@@ -173,6 +204,7 @@
 		E42667AA2A432F7500CF601B /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
+				E419CE652A439A9100399F79 /* DependencyAssambler */,
 				E42667AB2A432FC500CF601B /* HttpClientRequest.swift */,
 				E42667B32A4331A000CF601B /* HttpClient.swift */,
 				E42667B02A43315B00CF601B /* Extension */,
@@ -245,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				E42667CD2A43557100CF601B /* NetworkVerify.swift */,
+				E419CE6B2A439B6400399F79 /* DependencyAssambler */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -400,7 +433,9 @@
 				E42667D42A43591400CF601B /* TechnicalException.swift in Sources */,
 				E42667D02A43578100CF601B /* LocalizationFramework+Bundle.swift in Sources */,
 				E42667AC2A432FC500CF601B /* HttpClientRequest.swift in Sources */,
+				E419CE6E2A439B8500399F79 /* NetworkVerifyAssembler.swift in Sources */,
 				E42667CE2A43557100CF601B /* NetworkVerify.swift in Sources */,
+				E419CE712A439C8700399F79 /* GameAssembler.swift in Sources */,
 				E42667352A430B7A00CF601B /* Game.swift in Sources */,
 				E42667C02A4348BB00CF601B /* GameAlamofireRepository.swift in Sources */,
 				E42667B42A4331A000CF601B /* HttpClient.swift in Sources */,
@@ -409,6 +444,7 @@
 				E42667BB2A4345F000CF601B /* GetGamesRequest.swift in Sources */,
 				E42667D22A4357DE00CF601B /* LocalizedHelper.swift in Sources */,
 				E42667B22A43318100CF601B /* URLSession+Extension.swift in Sources */,
+				E419CE672A439ABC00399F79 /* HttpClientAssembler.swift in Sources */,
 				E42667BE2A4347DA00CF601B /* GameRemoteRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
