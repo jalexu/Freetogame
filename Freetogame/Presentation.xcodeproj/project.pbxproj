@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E419CE562A437C2B00399F79 /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE552A437C2B00399F79 /* GameListViewModel.swift */; };
+		E419CE592A43807D00399F79 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE582A43807D00399F79 /* ViewModelState.swift */; };
+		E419CE5B2A43819600399F79 /* GameListViewModelObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE5A2A43819600399F79 /* GameListViewModelObservable.swift */; };
 		E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BC2A4304F000CF601B /* FreetogameApp.swift */; };
 		E42666BF2A4304F000CF601B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BE2A4304F000CF601B /* ContentView.swift */; };
 		E42666C12A4304F100CF601B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42666C02A4304F100CF601B /* Assets.xcassets */; };
@@ -16,6 +19,7 @@
 		E42667512A431C1100CF601B /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E426674E2A431C1000CF601B /* Infrastructure.framework */; };
 		E42667522A431C1100CF601B /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E426674E2A431C1000CF601B /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E42667702A43238500CF601B /* FreetogameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426676F2A43238500CF601B /* FreetogameTests.swift */; };
+		E42667E32A4366B900CF601B /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E42667E22A4366B900CF601B /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E419CE552A437C2B00399F79 /* GameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		E419CE582A43807D00399F79 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		E419CE5A2A43819600399F79 /* GameListViewModelObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModelObservable.swift; sourceTree = "<group>"; };
 		E42666B92A4304F000CF601B /* Freetogame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freetogame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42666BC2A4304F000CF601B /* FreetogameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetogameApp.swift; sourceTree = "<group>"; };
 		E42666BE2A4304F000CF601B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +69,7 @@
 			files = (
 				E426674F2A431C1000CF601B /* Domain.framework in Frameworks */,
 				E42667512A431C1100CF601B /* Infrastructure.framework in Frameworks */,
+				E42667E32A4366B900CF601B /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +83,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E419CE512A437BAC00399F79 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE522A437BCE00399F79 /* GameList */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		E419CE522A437BCE00399F79 /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE542A437BE600399F79 /* View */,
+				E419CE532A437BDE00399F79 /* ViewModel */,
+			);
+			path = GameList;
+			sourceTree = "<group>";
+		};
+		E419CE532A437BDE00399F79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE552A437C2B00399F79 /* GameListViewModel.swift */,
+				E419CE5A2A43819600399F79 /* GameListViewModelObservable.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E419CE542A437BE600399F79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E419CE572A43806D00399F79 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE582A43807D00399F79 /* ViewModelState.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		E42666B02A4304EF00CF601B = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +146,12 @@
 		E42666BB2A4304F000CF601B /* Freetogame */ = {
 			isa = PBXGroup;
 			children = (
-				E42666BC2A4304F000CF601B /* FreetogameApp.swift */,
-				E42666BE2A4304F000CF601B /* ContentView.swift */,
 				E42666C02A4304F100CF601B /* Assets.xcassets */,
+				E42666BE2A4304F000CF601B /* ContentView.swift */,
+				E42666BC2A4304F000CF601B /* FreetogameApp.swift */,
+				E419CE512A437BAC00399F79 /* Game */,
 				E42666C22A4304F100CF601B /* Preview Content */,
+				E419CE572A43806D00399F79 /* Shared */,
 			);
 			path = Freetogame;
 			sourceTree = "<group>";
@@ -147,6 +198,9 @@
 			dependencies = (
 			);
 			name = Presentation;
+			packageProductDependencies = (
+				E42667E22A4366B900CF601B /* Swinject */,
+			);
 			productName = Freetogame;
 			productReference = E42666B92A4304F000CF601B /* Freetogame.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +251,9 @@
 				Base,
 			);
 			mainGroup = E42666B02A4304EF00CF601B;
+			packageReferences = (
+				E42667E12A4366B900CF601B /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = E42666BA2A4304F000CF601B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,8 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E419CE592A43807D00399F79 /* ViewModelState.swift in Sources */,
 				E42666BF2A4304F000CF601B /* ContentView.swift in Sources */,
 				E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */,
+				E419CE5B2A43819600399F79 /* GameListViewModelObservable.swift in Sources */,
+				E419CE562A437C2B00399F79 /* GameListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +550,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E42667E12A4366B900CF601B /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E42667E22A4366B900CF601B /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E42667E12A4366B900CF601B /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E42666B12A4304EF00CF601B /* Project object */;
 }

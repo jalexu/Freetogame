@@ -31,7 +31,7 @@ final class GameProxyTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func test_getGames_whenThereIsInternetConnection_ResultFromRemote() throws {
+    func test_getGames_whenThereIsInternetConnection_ThenResultFromRemote() throws {
         // Arrange
         let games = try [createGame()]
         networkVerify.isConnected = true
@@ -48,7 +48,7 @@ final class GameProxyTests: XCTestCase {
         cancellable?.cancel()
     }
     
-    func test_getMovies_whenThereIsNoInternetConnection_moviesResultFromRemote() throws {
+    func test_getGames_whenThereIsNoInternetConnection_ThenResultFromRemoteDontExecute() throws {
         // Arrange
         let games = try [createGame()]
         networkVerify.isConnected = false

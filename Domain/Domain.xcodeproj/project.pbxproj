@@ -20,6 +20,9 @@
 		E42667A22A43276E00CF601B /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667A12A43276E00CF601B /* GameTests.swift */; };
 		E42667A62A432C6400CF601B /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667A52A432C6400CF601B /* GameRepository.swift */; };
 		E42667A82A432DE200CF601B /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667A72A432DE200CF601B /* GameService.swift */; };
+		E42667E92A4366F700CF601B /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E42667E82A4366F700CF601B /* Swinject */; };
+		E42667EC2A43710100CF601B /* StubGameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667EB2A43710100CF601B /* StubGameRepository.swift */; };
+		E42667EF2A43724800CF601B /* GameServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667EE2A43724800CF601B /* GameServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,8 @@
 		E42667A12A43276E00CF601B /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		E42667A52A432C6400CF601B /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		E42667A72A432DE200CF601B /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		E42667EB2A43710100CF601B /* StubGameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubGameRepository.swift; sourceTree = "<group>"; };
+		E42667EE2A43724800CF601B /* GameServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42667E92A4366F700CF601B /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +186,26 @@
 			isa = PBXGroup;
 			children = (
 				E42667A12A43276E00CF601B /* GameTests.swift */,
+				E42667EA2A4370CD00CF601B /* Repository */,
+				E42667ED2A43722C00CF601B /* Service */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		E42667EA2A4370CD00CF601B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E42667EB2A43710100CF601B /* StubGameRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E42667ED2A43722C00CF601B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E42667EE2A43724800CF601B /* GameServiceTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +236,9 @@
 			dependencies = (
 			);
 			name = Domain;
+			packageProductDependencies = (
+				E42667E82A4366F700CF601B /* Swinject */,
+			);
 			productName = Domain;
 			productReference = E42666F02A43056600CF601B /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
@@ -262,6 +289,9 @@
 				Base,
 			);
 			mainGroup = E42666E62A43056600CF601B;
+			packageReferences = (
+				E42667E72A4366F700CF601B /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = E42666F12A43056600CF601B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -311,7 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42667EF2A43724800CF601B /* GameServiceTests.swift in Sources */,
 				E42667A22A43276E00CF601B /* GameTests.swift in Sources */,
+				E42667EC2A43710100CF601B /* StubGameRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E42667E72A4366F700CF601B /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E42667E82A4366F700CF601B /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E42667E72A4366F700CF601B /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E42666E72A43056600CF601B /* Project object */;
 }

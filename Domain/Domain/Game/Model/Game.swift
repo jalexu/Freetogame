@@ -9,7 +9,7 @@ import Foundation
 
 import Foundation
 
-public struct Game: Identifiable {
+public struct Game: Identifiable, Equatable {
     
     public let id: Int
     public let title: String

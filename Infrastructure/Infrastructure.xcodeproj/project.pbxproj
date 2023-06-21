@@ -30,6 +30,7 @@
 		E42667DB2A435EDB00CF601B /* GameProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667DA2A435EDB00CF601B /* GameProxyTests.swift */; };
 		E42667DE2A435FD700CF601B /* StubNetworkVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667DD2A435FD700CF601B /* StubNetworkVerify.swift */; };
 		E42667E02A43606200CF601B /* StubGameRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667DF2A43606200CF601B /* StubGameRemoteRepository.swift */; };
+		E42667E62A4366E000CF601B /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E42667E52A4366E000CF601B /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 			files = (
 				E42667C92A434EB500CF601B /* Domain.framework in Frameworks */,
 				E42667AF2A43311F00CF601B /* Alamofire in Frameworks */,
+				E42667E62A4366E000CF601B /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,9 +126,9 @@
 		E42667142A4305E500CF601B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				E42667A92A432F6200CF601B /* Shared */,
-				E42667302A430AC300CF601B /* Game */,
 				E42667152A4305E500CF601B /* Infrastructure.h */,
+				E42667302A430AC300CF601B /* Game */,
+				E42667A92A432F6200CF601B /* Shared */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -143,8 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				E42667C12A43499400CF601B /* Anticurruption */,
-				E42667B82A43458D00CF601B /* Repository */,
 				E42667322A430B4C00CF601B /* Dto */,
+				E42667B82A43458D00CF601B /* Repository */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -160,10 +162,10 @@
 		E42667A92A432F6200CF601B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				E42667D52A43599800CF601B /* Localizable */,
 				E42667B52A4331DE00CF601B /* Exception */,
-				E42667CC2A43555800CF601B /* Network */,
 				E42667AA2A432F7500CF601B /* HttpClient */,
+				E42667D52A43599800CF601B /* Localizable */,
+				E42667CC2A43555800CF601B /* Network */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -305,6 +307,7 @@
 			name = Infrastructure;
 			packageProductDependencies = (
 				E42667AE2A43311F00CF601B /* Alamofire */,
+				E42667E52A4366E000CF601B /* Swinject */,
 			);
 			productName = Infrastructure;
 			productReference = E42667122A4305E500CF601B /* Infrastructure.framework */;
@@ -358,6 +361,7 @@
 			mainGroup = E42667082A4305E500CF601B;
 			packageReferences = (
 				E42667AD2A43311F00CF601B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				E42667E42A4366E000CF601B /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = E42667132A4305E500CF601B /* Products */;
 			projectDirPath = "";
@@ -692,6 +696,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		E42667E42A4366E000CF601B /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -699,6 +711,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E42667AD2A43311F00CF601B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		E42667E52A4366E000CF601B /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E42667E42A4366E000CF601B /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,12 +6,25 @@
 //
 
 import Foundation
+import Combine
 
 public class GameService {
-    
     private let gameRepository: GameRepository
     
     public init(gameRepository: GameRepository) {
         self.gameRepository = gameRepository
+    }
+    
+    public func getGames() -> AnyPublisher<[Game], Error> {
+        return gameRepository.getGames().flatMap { games -> AnyPublisher<[Game], Error> in
+            guard !games.isEmpty else {
+                return Fail(error: GameException.emptyGameList).eraseToAnyPublisher()
+            }
+            
+            return Just(games)
+                .setFailureType(to: Error.self)
+                .eraseToAnyPublisher()
+        }
+        .eraseToAnyPublisher()
     }
 }
