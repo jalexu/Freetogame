@@ -11,6 +11,11 @@
 		E42667202A4305E600CF601B /* InfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426671F2A4305E600CF601B /* InfrastructureTests.swift */; };
 		E42667212A4305E600CF601B /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = E42667152A4305E500CF601B /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42667352A430B7A00CF601B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667342A430B7A00CF601B /* Game.swift */; };
+		E42667AC2A432FC500CF601B /* HttpClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667AB2A432FC500CF601B /* HttpClientRequest.swift */; };
+		E42667AF2A43311F00CF601B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E42667AE2A43311F00CF601B /* Alamofire */; };
+		E42667B22A43318100CF601B /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667B12A43318100CF601B /* URLSession+Extension.swift */; };
+		E42667B42A4331A000CF601B /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667B32A4331A000CF601B /* HttpClient.swift */; };
+		E42667B72A4331F100CF601B /* HttpClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667B62A4331F100CF601B /* HttpClientError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,10 @@
 		E426671A2A4305E600CF601B /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E426671F2A4305E600CF601B /* InfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureTests.swift; sourceTree = "<group>"; };
 		E42667342A430B7A00CF601B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		E42667AB2A432FC500CF601B /* HttpClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientRequest.swift; sourceTree = "<group>"; };
+		E42667B12A43318100CF601B /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		E42667B32A4331A000CF601B /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		E42667B62A4331F100CF601B /* HttpClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42667AF2A43311F00CF601B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +81,7 @@
 		E42667142A4305E500CF601B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				E42667A92A432F6200CF601B /* Shared */,
 				E42667302A430AC300CF601B /* Game */,
 				E42667152A4305E500CF601B /* Infrastructure.h */,
 			);
@@ -88,17 +99,9 @@
 		E42667302A430AC300CF601B /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				E42667312A430B3D00CF601B /* HttpClient */,
-			);
-			path = Game;
-			sourceTree = "<group>";
-		};
-		E42667312A430B3D00CF601B /* HttpClient */ = {
-			isa = PBXGroup;
-			children = (
 				E42667322A430B4C00CF601B /* Dto */,
 			);
-			path = HttpClient;
+			path = Game;
 			sourceTree = "<group>";
 		};
 		E42667322A430B4C00CF601B /* Dto */ = {
@@ -115,6 +118,41 @@
 				E42667342A430B7A00CF601B /* Game.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		E42667A92A432F6200CF601B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E42667AA2A432F7500CF601B /* HttpClient */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E42667AA2A432F7500CF601B /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				E42667B52A4331DE00CF601B /* Exception */,
+				E42667B02A43315B00CF601B /* Extension */,
+				E42667AB2A432FC500CF601B /* HttpClientRequest.swift */,
+				E42667B32A4331A000CF601B /* HttpClient.swift */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		E42667B02A43315B00CF601B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E42667B12A43318100CF601B /* URLSession+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E42667B52A4331DE00CF601B /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				E42667B62A4331F100CF601B /* HttpClientError.swift */,
+			);
+			path = Exception;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +183,9 @@
 			dependencies = (
 			);
 			name = Infrastructure;
+			packageProductDependencies = (
+				E42667AE2A43311F00CF601B /* Alamofire */,
+			);
 			productName = Infrastructure;
 			productReference = E42667122A4305E500CF601B /* Infrastructure.framework */;
 			productType = "com.apple.product-type.framework";
@@ -195,6 +236,9 @@
 				Base,
 			);
 			mainGroup = E42667082A4305E500CF601B;
+			packageReferences = (
+				E42667AD2A43311F00CF601B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E42667132A4305E500CF601B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -227,7 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42667AC2A432FC500CF601B /* HttpClientRequest.swift in Sources */,
 				E42667352A430B7A00CF601B /* Game.swift in Sources */,
+				E42667B42A4331A000CF601B /* HttpClient.swift in Sources */,
+				E42667B72A4331F100CF601B /* HttpClientError.swift in Sources */,
+				E42667B22A43318100CF601B /* URLSession+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +550,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E42667AD2A43311F00CF601B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E42667AE2A43311F00CF601B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E42667AD2A43311F00CF601B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E42667092A4305E500CF601B /* Project object */;
 }

@@ -18,6 +18,8 @@
 		E42667472A4315C800CF601B /* ArgumentValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667462A4315C800CF601B /* ArgumentValidator.swift */; };
 		E426679A2A4326BF00CF601B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42666F02A43056600CF601B /* Domain.framework */; platformFilter = ios; };
 		E42667A22A43276E00CF601B /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667A12A43276E00CF601B /* GameTests.swift */; };
+		E42667A62A432C6400CF601B /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667A52A432C6400CF601B /* GameRepository.swift */; };
+		E42667A82A432DE200CF601B /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667A72A432DE200CF601B /* GameService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		E42667462A4315C800CF601B /* ArgumentValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentValidator.swift; sourceTree = "<group>"; };
 		E42667962A4326BF00CF601B /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42667A12A43276E00CF601B /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		E42667A52A432C6400CF601B /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		E42667A72A432DE200CF601B /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		E426672C2A43094600CF601B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				E42667A52A432C6400CF601B /* GameRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		E426672D2A43095500CF601B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				E42667A72A432DE200CF601B /* GameService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 				E426673D2A430F6700CF601B /* LocalizationFramework+Bundle.swift in Sources */,
 				E42667382A430EA300CF601B /* GameException.swift in Sources */,
 				E426673B2A430F2700CF601B /* LocalizedHelper.swift in Sources */,
+				E42667A62A432C6400CF601B /* GameRepository.swift in Sources */,
 				E42667442A43151800CF601B /* EmptyParamException.swift in Sources */,
+				E42667A82A432DE200CF601B /* GameService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
