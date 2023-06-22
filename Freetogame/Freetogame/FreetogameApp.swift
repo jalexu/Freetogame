@@ -11,7 +11,7 @@ import SwiftUI
 struct FreetogameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: DependencyInjectionContainer.shared.resolve(GameListViewModel.self)!)
+            GameListView(viewModel: DependencyInjectionContainer.shared.resolve(GameListViewModel.self)!)
         }
     }
 }

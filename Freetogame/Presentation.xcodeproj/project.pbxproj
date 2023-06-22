@@ -15,7 +15,7 @@
 		E419CE642A43995600399F79 /* GameDependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE632A43995600399F79 /* GameDependencyInjection.swift */; };
 		E419CE6A2A439B2800399F79 /* InfrastructureDependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE692A439B2800399F79 /* InfrastructureDependencyInjection.swift */; };
 		E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BC2A4304F000CF601B /* FreetogameApp.swift */; };
-		E42666BF2A4304F000CF601B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BE2A4304F000CF601B /* ContentView.swift */; };
+		E42666BF2A4304F000CF601B /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BE2A4304F000CF601B /* GameListView.swift */; };
 		E42666C12A4304F100CF601B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42666C02A4304F100CF601B /* Assets.xcassets */; };
 		E42666C42A4304F100CF601B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42666C32A4304F100CF601B /* Preview Assets.xcassets */; };
 		E426674F2A431C1000CF601B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E426674D2A431C1000CF601B /* Domain.framework */; };
@@ -61,7 +61,7 @@
 		E419CE692A439B2800399F79 /* InfrastructureDependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureDependencyInjection.swift; sourceTree = "<group>"; };
 		E42666B92A4304F000CF601B /* Freetogame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freetogame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42666BC2A4304F000CF601B /* FreetogameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetogameApp.swift; sourceTree = "<group>"; };
-		E42666BE2A4304F000CF601B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E42666BE2A4304F000CF601B /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
 		E42666C02A4304F100CF601B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E42666C32A4304F100CF601B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E426674D2A431C1000CF601B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +121,7 @@
 		E419CE542A437BE600399F79 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E42666BE2A4304F000CF601B /* GameListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,7 +192,6 @@
 			children = (
 				E419CE5C2A43958300399F79 /* DependencyInjection */,
 				E42666C02A4304F100CF601B /* Assets.xcassets */,
-				E42666BE2A4304F000CF601B /* ContentView.swift */,
 				E42666BC2A4304F000CF601B /* FreetogameApp.swift */,
 				E419CE512A437BAC00399F79 /* Game */,
 				E42666C22A4304F100CF601B /* Preview Content */,
@@ -334,7 +334,7 @@
 			files = (
 				E419CE5E2A4395AA00399F79 /* DependencyInjectionContainer.swift in Sources */,
 				E419CE592A43807D00399F79 /* ViewModelState.swift in Sources */,
-				E42666BF2A4304F000CF601B /* ContentView.swift in Sources */,
+				E42666BF2A4304F000CF601B /* GameListView.swift in Sources */,
 				E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */,
 				E419CE642A43995600399F79 /* GameDependencyInjection.swift in Sources */,
 				E419CE5B2A43819600399F79 /* GameListViewModelObservable.swift in Sources */,
