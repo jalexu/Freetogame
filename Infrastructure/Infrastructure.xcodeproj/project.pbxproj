@@ -10,6 +10,11 @@
 		E419CE672A439ABC00399F79 /* HttpClientAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE662A439ABC00399F79 /* HttpClientAssembler.swift */; };
 		E419CE6E2A439B8500399F79 /* NetworkVerifyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE6D2A439B8500399F79 /* NetworkVerifyAssembler.swift */; };
 		E419CE712A439C8700399F79 /* GameAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE702A439C8700399F79 /* GameAssembler.swift */; };
+		E419CE742A4465B600399F79 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E419CE732A4465B600399F79 /* Realm */; };
+		E419CE762A4465B600399F79 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E419CE752A4465B600399F79 /* RealmSwift */; };
+		E419CE802A4467F100399F79 /* RealmManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE7F2A4467F100399F79 /* RealmManagerProtocol.swift */; };
+		E419CE822A44680D00399F79 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE812A44680D00399F79 /* RealmManager.swift */; };
+		E419CE862A446A8C00399F79 /* GameDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE852A446A8C00399F79 /* GameDao.swift */; };
 		E426671B2A4305E600CF601B /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42667122A4305E500CF601B /* Infrastructure.framework */; };
 		E42667212A4305E600CF601B /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = E42667152A4305E500CF601B /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42667352A430B7A00CF601B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667342A430B7A00CF601B /* Game.swift */; };
@@ -64,6 +69,9 @@
 		E419CE662A439ABC00399F79 /* HttpClientAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientAssembler.swift; sourceTree = "<group>"; };
 		E419CE6D2A439B8500399F79 /* NetworkVerifyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkVerifyAssembler.swift; sourceTree = "<group>"; };
 		E419CE702A439C8700399F79 /* GameAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssembler.swift; sourceTree = "<group>"; };
+		E419CE7F2A4467F100399F79 /* RealmManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerProtocol.swift; sourceTree = "<group>"; };
+		E419CE812A44680D00399F79 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		E419CE852A446A8C00399F79 /* GameDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDao.swift; sourceTree = "<group>"; };
 		E42667122A4305E500CF601B /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42667152A4305E500CF601B /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		E426671A2A4305E600CF601B /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +103,8 @@
 			files = (
 				E42667C92A434EB500CF601B /* Domain.framework in Frameworks */,
 				E42667AF2A43311F00CF601B /* Alamofire in Frameworks */,
+				E419CE742A4465B600399F79 /* Realm in Frameworks */,
+				E419CE762A4465B600399F79 /* RealmSwift in Frameworks */,
 				E42667E62A4366E000CF601B /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +144,39 @@
 			path = DependencyAssambler;
 			sourceTree = "<group>";
 		};
+		E419CE7C2A4467AD00399F79 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE7E2A4467E100399F79 /* Realm */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		E419CE7E2A4467E100399F79 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE7F2A4467F100399F79 /* RealmManagerProtocol.swift */,
+				E419CE812A44680D00399F79 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E419CE832A446A4A00399F79 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE842A446A5700399F79 /* Dao */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		E419CE842A446A5700399F79 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE852A446A8C00399F79 /* GameDao.swift */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
 		E42667082A4305E500CF601B = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +199,7 @@
 		E42667142A4305E500CF601B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				E419CE7C2A4467AD00399F79 /* Database */,
 				E42667152A4305E500CF601B /* Infrastructure.h */,
 				E42667302A430AC300CF601B /* Game */,
 				E42667A92A432F6200CF601B /* Shared */,
@@ -174,6 +218,7 @@
 		E42667302A430AC300CF601B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				E419CE832A446A4A00399F79 /* Persistance */,
 				E419CE6F2A439C5100399F79 /* DependencyAssambler */,
 				E42667C12A43499400CF601B /* Anticurruption */,
 				E42667322A430B4C00CF601B /* Dto */,
@@ -341,6 +386,8 @@
 			packageProductDependencies = (
 				E42667AE2A43311F00CF601B /* Alamofire */,
 				E42667E52A4366E000CF601B /* Swinject */,
+				E419CE732A4465B600399F79 /* Realm */,
+				E419CE752A4465B600399F79 /* RealmSwift */,
 			);
 			productName = Infrastructure;
 			productReference = E42667122A4305E500CF601B /* Infrastructure.framework */;
@@ -395,6 +442,7 @@
 			packageReferences = (
 				E42667AD2A43311F00CF601B /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E42667E42A4366E000CF601B /* XCRemoteSwiftPackageReference "Swinject" */,
+				E419CE722A4465B600399F79 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = E42667132A4305E500CF601B /* Products */;
 			projectDirPath = "";
@@ -434,8 +482,11 @@
 				E42667D02A43578100CF601B /* LocalizationFramework+Bundle.swift in Sources */,
 				E42667AC2A432FC500CF601B /* HttpClientRequest.swift in Sources */,
 				E419CE6E2A439B8500399F79 /* NetworkVerifyAssembler.swift in Sources */,
+				E419CE822A44680D00399F79 /* RealmManager.swift in Sources */,
+				E419CE862A446A8C00399F79 /* GameDao.swift in Sources */,
 				E42667CE2A43557100CF601B /* NetworkVerify.swift in Sources */,
 				E419CE712A439C8700399F79 /* GameAssembler.swift in Sources */,
+				E419CE802A4467F100399F79 /* RealmManagerProtocol.swift in Sources */,
 				E42667352A430B7A00CF601B /* Game.swift in Sources */,
 				E42667C02A4348BB00CF601B /* GameAlamofireRepository.swift in Sources */,
 				E42667B42A4331A000CF601B /* HttpClient.swift in Sources */,
@@ -724,6 +775,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E419CE722A4465B600399F79 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E42667AD2A43311F00CF601B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -743,6 +802,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E419CE732A4465B600399F79 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E419CE722A4465B600399F79 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		E419CE752A4465B600399F79 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E419CE722A4465B600399F79 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		E42667AE2A43311F00CF601B /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E42667AD2A43311F00CF601B /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -8,15 +8,19 @@
 import Foundation
 import Combine
 import Domain
+@_implementationOnly import RealmSwift
 
 class GameProxy: GameRepository {
     private let gameRemoteRepository: GameRemoteRepository
     private let networkVerify: NetworkVerify
+    private let realmManager: RealmManagerProtocol
     
     init(gameRemoteRepository: GameRemoteRepository,
-         networkVerify: NetworkVerify) {
+         networkVerify: NetworkVerify,
+         realmManager: RealmManagerProtocol) {
         self.gameRemoteRepository = gameRemoteRepository
         self.networkVerify = networkVerify
+        self.realmManager = realmManager
     }
     
     func getGames() -> AnyPublisher<[Domain.Game], Error> {
@@ -31,6 +35,11 @@ class GameProxy: GameRepository {
             }
         }
         .eraseToAnyPublisher()
+    }
+    
+    func saveFavoriteGame(game: Domain.Game) -> AnyPublisher<Bool, Error> {
+        let gameDao: Object = GameTranslator.fromGameToGameDao(game: game)
+        return realmManager.save(object: gameDao)
     }
     
 }

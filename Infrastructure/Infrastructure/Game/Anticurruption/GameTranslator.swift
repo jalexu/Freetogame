@@ -24,4 +24,18 @@ struct GameTranslator {
             freetogameProfileURL: game.freetogameProfileURL)
         return game
     }
+    
+    static func fromGameToGameDao(game: Domain.Game) -> GameDao {
+        return GameDao(id: game.id,
+                       title: game.title,
+                       thumbnail: game.thumbnail,
+                       shortDescription: game.shortDescription,
+                       gameURL: game.gameURL,
+                       genre: game.genre,
+                       platform: game.platform,
+                       publisher: game.publisher,
+                       developer: game.developer,
+                       releaseDate: game.releaseDate,
+                       freetogameProfileURL: game.freetogameProfileURL)
+    }
 }
