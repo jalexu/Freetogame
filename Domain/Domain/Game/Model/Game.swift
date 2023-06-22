@@ -20,7 +20,7 @@ public struct Game: Identifiable, Equatable {
     public let platform: String
     public let publisher: String
     public let developer: String
-    public let releaseDate: String
+    public var releaseDate: String
     public let freetogameProfileURL: String
     
     public init(
@@ -47,6 +47,18 @@ public struct Game: Identifiable, Equatable {
         self.releaseDate = releaseDate
         self.freetogameProfileURL = freetogameProfileURL
         try validateFields()
+            self.tranformDate(date: self.releaseDate)
+    }
+    
+    private mutating func tranformDate(date: String) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        if let newDate = dateFormatter.date(from: date) {
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let formattedDate = dateFormatter.string(from: newDate)
+            self.releaseDate = formattedDate
+        }
     }
     
     private func validateFields() throws {

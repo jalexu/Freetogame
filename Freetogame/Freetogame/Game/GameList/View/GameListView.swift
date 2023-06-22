@@ -16,46 +16,48 @@ struct GameListView<ViewModel>: View where ViewModel: MovieDetailViewModelObserv
         self.viewModel = viewModel
     }
     
-    func listView(games: [Game]) -> some View {
-        VStack {
+    func listContentView(games: [Game]) -> some View {
+        NavigationStack {
             List(games) { game in
-                Text(game.shortDescription)
+                NavigationLink {
+                    GameDatailView(game: game)
+                } label: {
+                    GameListItemView(game: game)
+                }
+
             }
         }
     }
     
     var body: some View {
-        VStack {
+        TabView {
             switch viewModel.state {
             case .loading:
                 ProgressView()
                     .tint(.blue)
             case .success(let games):
-                TabView {
-                    listView(games: games ?? [])
-                        .tabItem {
-                            Label("Games", systemImage: "list.dash")
-                        }
-                    Text("Hola")
-                        .tabItem {
-                            Label("Favoritos", systemImage: "square.and.pencil")
-                        }
-                }
-                
+                listContentView(games: games ?? [])
+                    .tabItem {
+                        Label("Games", systemImage: "list.dash")
+                    }
+                Text("Hola")
+                    .tabItem {
+                        Label("Favoritos", systemImage: "star")
+                    }
             case .failure(error: let error):
                 Text(error.description)
             }
         }
-        .edgesIgnoringSafeArea(.all)
-        .padding()
         .onAppear {
             viewModel.getGames()
         }
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         GameListView(viewModel: DependencyInjectionContainer.shared.resolve(GameListViewModel.self)!)
     }
 }
+#endif
