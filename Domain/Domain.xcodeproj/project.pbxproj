@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E419CE932A44BDCE00399F79 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE922A44BDCE00399F79 /* GameDetail.swift */; };
+		E419CE9A2A44E83E00399F79 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE992A44E83E00399F79 /* StringExtension.swift */; };
 		E42666FF2A43056700CF601B /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = E42666F32A43056600CF601B /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E426672F2A43097900CF601B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426672E2A43097900CF601B /* Game.swift */; };
 		E42667382A430EA300CF601B /* GameException.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667372A430EA300CF601B /* GameException.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E419CE922A44BDCE00399F79 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
+		E419CE992A44E83E00399F79 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E42666F02A43056600CF601B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42666F32A43056600CF601B /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		E426672E2A43097900CF601B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -74,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E419CE982A44E82900399F79 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE992A44E83E00399F79 /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		E42666E62A43056600CF601B = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				E426672E2A43097900CF601B /* Game.swift */,
+				E419CE922A44BDCE00399F79 /* GameDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +162,7 @@
 		E42667392A430EEB00CF601B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E419CE982A44E82900399F79 /* Extension */,
 				E42667402A43144E00CF601B /* SharedLocalizable.strings */,
 				E42667452A4315BD00CF601B /* ArgumentValidator */,
 				E42667422A4314DC00CF601B /* Exceptions */,
@@ -328,11 +342,13 @@
 			files = (
 				E426672F2A43097900CF601B /* Game.swift in Sources */,
 				E42667472A4315C800CF601B /* ArgumentValidator.swift in Sources */,
+				E419CE9A2A44E83E00399F79 /* StringExtension.swift in Sources */,
 				E426673D2A430F6700CF601B /* LocalizationFramework+Bundle.swift in Sources */,
 				E42667382A430EA300CF601B /* GameException.swift in Sources */,
 				E426673B2A430F2700CF601B /* LocalizedHelper.swift in Sources */,
 				E42667A62A432C6400CF601B /* GameRepository.swift in Sources */,
 				E42667442A43151800CF601B /* EmptyParamException.swift in Sources */,
+				E419CE932A44BDCE00399F79 /* GameDetail.swift in Sources */,
 				E42667A82A432DE200CF601B /* GameService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,4 +10,5 @@ import Combine
 
 public protocol GameRepository {
     func getGames() -> AnyPublisher<[Game], Error>
+    func getGameDetail(id: Int) -> AnyPublisher<Domain.GameDetail, Error>
 }

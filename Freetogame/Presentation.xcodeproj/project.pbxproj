@@ -18,6 +18,11 @@
 		E419CE8B2A4497B600399F79 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE8A2A4497B600399F79 /* URLImageView.swift */; };
 		E419CE8E2A4497F900399F79 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE8D2A4497F900399F79 /* ImageExtension.swift */; };
 		E419CE912A44AB1F00399F79 /* GameDatailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE902A44AB1F00399F79 /* GameDatailView.swift */; };
+		E419CE9F2A44F49A00399F79 /* GameDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE9E2A44F49A00399F79 /* GameDetailViewModel.swift */; };
+		E419CEA12A44F57F00399F79 /* GameDetailObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEA02A44F57F00399F79 /* GameDetailObservable.swift */; };
+		E419CEA52A44F6AF00399F79 /* GameDetailDependencyAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEA42A44F6AF00399F79 /* GameDetailDependencyAssembler.swift */; };
+		E419CEA72A45039F00399F79 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEA62A45039F00399F79 /* GalleryView.swift */; };
+		E419CEA92A450AF300399F79 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEA82A450AF300399F79 /* NavigationLazyView.swift */; };
 		E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BC2A4304F000CF601B /* FreetogameApp.swift */; };
 		E42666BF2A4304F000CF601B /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BE2A4304F000CF601B /* GameListView.swift */; };
 		E42666C12A4304F100CF601B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42666C02A4304F100CF601B /* Assets.xcassets */; };
@@ -68,6 +73,11 @@
 		E419CE8D2A4497F900399F79 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		E419CE8F2A449E2B00399F79 /* Presentation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Presentation-Info.plist"; sourceTree = "<group>"; };
 		E419CE902A44AB1F00399F79 /* GameDatailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDatailView.swift; sourceTree = "<group>"; };
+		E419CE9E2A44F49A00399F79 /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
+		E419CEA02A44F57F00399F79 /* GameDetailObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailObservable.swift; sourceTree = "<group>"; };
+		E419CEA42A44F6AF00399F79 /* GameDetailDependencyAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailDependencyAssembler.swift; sourceTree = "<group>"; };
+		E419CEA62A45039F00399F79 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		E419CEA82A450AF300399F79 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 		E42666B92A4304F000CF601B /* Freetogame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freetogame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42666BC2A4304F000CF601B /* FreetogameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetogameApp.swift; sourceTree = "<group>"; };
 		E42666BE2A4304F000CF601B /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
@@ -103,6 +113,7 @@
 		E419CE512A437BAC00399F79 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				E419CE9B2A44F01200399F79 /* GameDetail */,
 				E419CE522A437BCE00399F79 /* GameList */,
 			);
 			path = Game;
@@ -132,7 +143,6 @@
 			children = (
 				E42666BE2A4304F000CF601B /* GameListView.swift */,
 				E419CE872A44938100399F79 /* GameListItemView.swift */,
-				E419CE902A44AB1F00399F79 /* GameDatailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				E419CE8A2A4497B600399F79 /* URLImageView.swift */,
+				E419CEA82A450AF300399F79 /* NavigationLazyView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -195,6 +206,42 @@
 				E419CE8D2A4497F900399F79 /* ImageExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		E419CE9B2A44F01200399F79 /* GameDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E419CEA22A44F67500399F79 /* DependencyAssembler */,
+				E419CE9D2A44F04800399F79 /* ViewModel */,
+				E419CE9C2A44F04100399F79 /* View */,
+			);
+			path = GameDetail;
+			sourceTree = "<group>";
+		};
+		E419CE9C2A44F04100399F79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE902A44AB1F00399F79 /* GameDatailView.swift */,
+				E419CEA62A45039F00399F79 /* GalleryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E419CE9D2A44F04800399F79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E419CE9E2A44F49A00399F79 /* GameDetailViewModel.swift */,
+				E419CEA02A44F57F00399F79 /* GameDetailObservable.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E419CEA22A44F67500399F79 /* DependencyAssembler */ = {
+			isa = PBXGroup;
+			children = (
+				E419CEA42A44F6AF00399F79 /* GameDetailDependencyAssembler.swift */,
+			);
+			path = DependencyAssembler;
 			sourceTree = "<group>";
 		};
 		E42666B02A4304EF00CF601B = {
@@ -362,16 +409,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E419CEA12A44F57F00399F79 /* GameDetailObservable.swift in Sources */,
 				E419CE5E2A4395AA00399F79 /* DependencyInjectionContainer.swift in Sources */,
+				E419CE9F2A44F49A00399F79 /* GameDetailViewModel.swift in Sources */,
 				E419CE592A43807D00399F79 /* ViewModelState.swift in Sources */,
 				E42666BF2A4304F000CF601B /* GameListView.swift in Sources */,
+				E419CEA72A45039F00399F79 /* GalleryView.swift in Sources */,
 				E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */,
 				E419CE8B2A4497B600399F79 /* URLImageView.swift in Sources */,
 				E419CE642A43995600399F79 /* GameDependencyInjection.swift in Sources */,
+				E419CEA52A44F6AF00399F79 /* GameDetailDependencyAssembler.swift in Sources */,
 				E419CE5B2A43819600399F79 /* GameListViewModelObservable.swift in Sources */,
 				E419CE8E2A4497F900399F79 /* ImageExtension.swift in Sources */,
 				E419CE612A43968B00399F79 /* GameListDependencyAssembler.swift in Sources */,
 				E419CE562A437C2B00399F79 /* GameListViewModel.swift in Sources */,
+				E419CEA92A450AF300399F79 /* NavigationLazyView.swift in Sources */,
 				E419CE6A2A439B2800399F79 /* InfrastructureDependencyInjection.swift in Sources */,
 				E419CE912A44AB1F00399F79 /* GameDatailView.swift in Sources */,
 				E419CE882A44938100399F79 /* GameListItemView.swift in Sources */,

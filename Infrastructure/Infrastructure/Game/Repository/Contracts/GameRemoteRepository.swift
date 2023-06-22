@@ -11,4 +11,5 @@ import Domain
 
 protocol GameRemoteRepository {
     func getGames() throws -> AnyPublisher<[Domain.Game], Error>
+    func getGameDatail(id: Int) throws -> AnyPublisher<Domain.GameDetail, Error>
 }

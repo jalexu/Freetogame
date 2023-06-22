@@ -20,11 +20,15 @@ struct GameListView<ViewModel>: View where ViewModel: MovieDetailViewModelObserv
         NavigationStack {
             List(games) { game in
                 NavigationLink {
-                    GameDatailView(game: game)
+                    GameDatailView(
+                        viewModel:DependencyInjectionContainer.shared.resolve(
+                            GameDetailViewModel.self,
+                            argument: game.id)!
+                    )
                 } label: {
                     GameListItemView(game: game)
                 }
-
+                
             }
         }
     }
@@ -34,7 +38,7 @@ struct GameListView<ViewModel>: View where ViewModel: MovieDetailViewModelObserv
             switch viewModel.state {
             case .loading:
                 ProgressView()
-                    .tint(.blue)
+                    .tint(.primary)
             case .success(let games):
                 listContentView(games: games ?? [])
                     .tabItem {
@@ -51,6 +55,7 @@ struct GameListView<ViewModel>: View where ViewModel: MovieDetailViewModelObserv
         .onAppear {
             viewModel.getGames()
         }
+        .navigationBarTitle("Games")
     }
 }
 

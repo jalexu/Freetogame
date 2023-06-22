@@ -37,6 +37,20 @@ class GameProxy: GameRepository {
         .eraseToAnyPublisher()
     }
     
+    func getGameDetail(id: Int) -> AnyPublisher<Domain.GameDetail, Error> {
+        return networkVerify.hasInternetConnection().flatMap { isConnected -> AnyPublisher<Domain.GameDetail, Error> in
+            guard isConnected else {
+                return Fail(error: TechnicalException.notConnectedToNetwork).eraseToAnyPublisher()
+            }
+            do {
+                return try self.gameRemoteRepository.getGameDatail(id: id)
+            } catch {
+                return Fail(error: error).eraseToAnyPublisher()
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+    
     func saveFavoriteGame(game: Domain.Game) -> AnyPublisher<Bool, Error> {
         let gameDao: Object = GameTranslator.fromGameToGameDao(game: game)
         return realmManager.save(object: gameDao)

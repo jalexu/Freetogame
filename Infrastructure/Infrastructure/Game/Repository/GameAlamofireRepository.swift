@@ -34,4 +34,22 @@ class GameAlamofireRepository: GameRemoteRepository {
         }
         .eraseToAnyPublisher()
     }
+    
+    func getGameDatail(id: Int) -> AnyPublisher<Domain.GameDetail, Error> {
+        let request = GameDetailRequest(object: id)
+        
+        return httpClient.requestGeneric(request: request,
+                                         entity: GameDetail.self,
+                                         queue: .global(),
+                                         retries: 1)
+        .tryMap { game in
+            do {
+                return try GameTranslator.fromGameDetailDtoToDomain(gameDetail: game)
+            } catch {
+                throw error
+            }
+        }
+        .eraseToAnyPublisher()
+        
+    }
 }

@@ -25,6 +25,43 @@ struct GameTranslator {
         return game
     }
     
+    static func fromGameDetailDtoToDomain(gameDetail: GameDetail) throws -> Domain.GameDetail {
+        let detail = try Domain.GameDetail(
+            id: gameDetail.id,
+            title: gameDetail.title,
+            thumbnail: gameDetail.thumbnail,
+            status: gameDetail.status,
+            shortDescription: gameDetail.shortDescription,
+            description: gameDetail.description,
+            gameURL: gameDetail.gameURL,
+            genre: gameDetail.genre,
+            platform: gameDetail.platform,
+            publisher: gameDetail.publisher,
+            developer: gameDetail.developer,
+            releaseDate: gameDetail.releaseDate,
+            freetogameProfileURL: gameDetail.freetogameProfileURL,
+            minimumSystemRequirements: fromMinimumSystemDtoToDomain(system: gameDetail.minimumSystemRequirements),
+            screenshots: fromScreenshotDtoToDomain(screenshots: gameDetail.screenshots))
+        return detail
+    }
+    
+    private static func fromMinimumSystemDtoToDomain(system: MinimumSystemRequirements) -> Domain.MinimumSystemRequirements {
+        return Domain.MinimumSystemRequirements(
+            os: system.os,
+            processor: system.processor,
+            memory: system.memory,
+            graphics: system.graphics,
+            storage: system.storage)
+    }
+    
+    private static func fromScreenshotDtoToDomain(screenshots: [Screenshot]) -> [Domain.Screenshot] {
+        var screens: [Domain.Screenshot] = []
+        for screen in screenshots {
+            screens.append(Domain.Screenshot(id: screen.id, image: screen.image))
+        }
+        return screens
+    }
+    
     static func fromGameToGameDao(game: Domain.Game) -> GameDao {
         return GameDao(id: game.id,
                        title: game.title,

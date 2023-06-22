@@ -5,10 +5,6 @@
 //  Created by Jaime Alexander Uribe Uribe - Ceiba Software on 21/06/23.
 //
 
-import Foundation
-
-import Foundation
-
 public struct Game: Identifiable, Equatable {
     
     public let id: Int
@@ -35,31 +31,19 @@ public struct Game: Identifiable, Equatable {
         developer: String,
         releaseDate: String,
         freetogameProfileURL: String) throws {
-        self.id = id
-        self.title = title
-        self.thumbnail = thumbnail
-        self.shortDescription = shortDescription
-        self.gameURL = gameURL
-        self.genre = genre
-        self.platform = platform
-        self.publisher = publisher
-        self.developer = developer
-        self.releaseDate = releaseDate
-        self.freetogameProfileURL = freetogameProfileURL
-        try validateFields()
-            self.tranformDate(date: self.releaseDate)
-    }
-    
-    private mutating func tranformDate(date: String) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        
-        if let newDate = dateFormatter.date(from: date) {
-            dateFormatter.dateFormat = "dd/MM/yyyy"
-            let formattedDate = dateFormatter.string(from: newDate)
-            self.releaseDate = formattedDate
+            self.id = id
+            self.title = title
+            self.thumbnail = thumbnail
+            self.shortDescription = shortDescription
+            self.gameURL = gameURL
+            self.genre = genre
+            self.platform = platform
+            self.publisher = publisher
+            self.developer = developer
+            self.releaseDate = releaseDate.convertToDateFormat()
+            self.freetogameProfileURL = freetogameProfileURL
+            try validateFields()
         }
-    }
     
     private func validateFields() throws {
         guard self.id > 0 else {

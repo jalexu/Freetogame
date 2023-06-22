@@ -21,7 +21,8 @@ final class GameProxyTests: XCTestCase {
         try super.setUpWithError()
         gameRemoteRepository = StubGameRemoteRepository()
         networkVerify = StubNetworkVerify()
-        stub = GameProxy(gameRemoteRepository: gameRemoteRepository, networkVerify: networkVerify)
+        stub = GameProxy(gameRemoteRepository: gameRemoteRepository, networkVerify: networkVerify,
+                         realmManager: <#RealmManagerProtocol#>)
     }
 
     override func tearDownWithError() throws {
