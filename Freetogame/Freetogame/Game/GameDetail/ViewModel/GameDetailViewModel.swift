@@ -41,7 +41,6 @@ extension GameDetailViewModel: GameDetailObservable {
                 self?.state = .failure(error: error.localizedDescription)
             }, receiveValue: { [weak self] detail in
                 self?.gameDetail = detail
-                self?.gameDetail?.isfavorite = self?.isFavorite ?? false
                 self?.state = .success(data: self?.gameDetail)
             })
             .store(in: &cancellables)

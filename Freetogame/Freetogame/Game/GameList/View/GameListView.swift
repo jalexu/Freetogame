@@ -33,7 +33,9 @@ struct GameListView<ViewModel>: View where ViewModel: MovieDetailViewModelObserv
                                             DependencyInjectionContainer.shared.resolve(
                                                 GameDetailViewModel.self,
                                                 arguments: game.id, arg2: game.isFavorite)!) {
-                                                    viewModel.getFavoriteGames()
+                                                    if selectedTab == 2 {
+                                                        viewModel.getFavoriteGames()
+                                                    }
                                                 }
                         } label: {
                             GameListItemView(game: game)

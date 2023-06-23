@@ -37,18 +37,23 @@ class GameProxy: GameRepository {
         .eraseToAnyPublisher()
     }
     
-    func getGameDetail(id: Int) -> AnyPublisher<Domain.GameDetail, Error> {
-        return networkVerify.hasInternetConnection().flatMap { isConnected -> AnyPublisher<Domain.GameDetail, Error> in
-            guard isConnected else {
-                return Fail(error: TechnicalException.notConnectedToNetwork).eraseToAnyPublisher()
+    func getGameDetail(id: Int)  -> AnyPublisher<Domain.GameDetail, Error> {
+        return Publishers.Zip3(networkVerify.hasInternetConnection(),
+                              getFavoriteGame(id: id),
+                               try! gameRemoteRepository.getGameDatail(id: id))
+            .flatMap { (isConnected, favorite, game) -> AnyPublisher<Domain.GameDetail, Error> in
+                guard isConnected else {
+                    return Fail(error: TechnicalException.notConnectedToNetwork).eraseToAnyPublisher()
+                }
+                var detailGame = game
+                if favorite != nil {
+                    detailGame.isfavorite = true
+                }
+                return Just(detailGame)
+                    .setFailureType(to: Error.self)
+                    .eraseToAnyPublisher()
             }
-            do {
-                return try self.gameRemoteRepository.getGameDatail(id: id)
-            } catch {
-                return Fail(error: error).eraseToAnyPublisher()
-            }
-        }
-        .eraseToAnyPublisher()
+            .eraseToAnyPublisher()
     }
     
     private func getFavoriteGame(id: Int) -> AnyPublisher<Domain.Game?, Error> {
