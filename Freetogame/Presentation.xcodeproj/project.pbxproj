@@ -24,6 +24,10 @@
 		E419CEA72A45039F00399F79 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEA62A45039F00399F79 /* GalleryView.swift */; };
 		E419CEA92A450AF300399F79 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEA82A450AF300399F79 /* NavigationLazyView.swift */; };
 		E419CEB32A45CFC300399F79 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEB22A45CFC300399F79 /* SearchBar.swift */; };
+		E419CEC12A45EF9100399F79 /* GameDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEC02A45EF9100399F79 /* GameDetailViewModelTests.swift */; };
+		E419CEC42A45F07400399F79 /* StubGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEC32A45F07400399F79 /* StubGameService.swift */; };
+		E419CEC62A45F2CB00399F79 /* StubGameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEC52A45F2CB00399F79 /* StubGameRepository.swift */; };
+		E419CEC92A45F34D00399F79 /* StubGameLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEC82A45F34D00399F79 /* StubGameLocalRepository.swift */; };
 		E42666BD2A4304F000CF601B /* FreetogameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BC2A4304F000CF601B /* FreetogameApp.swift */; };
 		E42666BF2A4304F000CF601B /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42666BE2A4304F000CF601B /* GameListView.swift */; };
 		E42666C12A4304F100CF601B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42666C02A4304F100CF601B /* Assets.xcassets */; };
@@ -80,6 +84,10 @@
 		E419CEA62A45039F00399F79 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		E419CEA82A450AF300399F79 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 		E419CEB22A45CFC300399F79 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		E419CEC02A45EF9100399F79 /* GameDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModelTests.swift; sourceTree = "<group>"; };
+		E419CEC32A45F07400399F79 /* StubGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubGameService.swift; sourceTree = "<group>"; };
+		E419CEC52A45F2CB00399F79 /* StubGameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubGameRepository.swift; sourceTree = "<group>"; };
+		E419CEC82A45F34D00399F79 /* StubGameLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubGameLocalRepository.swift; sourceTree = "<group>"; };
 		E42666B92A4304F000CF601B /* Freetogame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freetogame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42666BC2A4304F000CF601B /* FreetogameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetogameApp.swift; sourceTree = "<group>"; };
 		E42666BE2A4304F000CF601B /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
@@ -247,6 +255,24 @@
 			path = DependencyAssembler;
 			sourceTree = "<group>";
 		};
+		E419CEBF2A45EF6A00399F79 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E419CEC02A45EF9100399F79 /* GameDetailViewModelTests.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		E419CEC22A45F06600399F79 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				E419CEC32A45F07400399F79 /* StubGameService.swift */,
+				E419CEC52A45F2CB00399F79 /* StubGameRepository.swift */,
+				E419CEC82A45F34D00399F79 /* StubGameLocalRepository.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
 		E42666B02A4304EF00CF601B = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +326,8 @@
 		E426676E2A43238500CF601B /* FreetogameTests */ = {
 			isa = PBXGroup;
 			children = (
+				E419CEC22A45F06600399F79 /* Stub */,
+				E419CEBF2A45EF6A00399F79 /* Game */,
 				E426676F2A43238500CF601B /* FreetogameTests.swift */,
 			);
 			path = FreetogameTests;
@@ -438,7 +466,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E419CEC92A45F34D00399F79 /* StubGameLocalRepository.swift in Sources */,
+				E419CEC42A45F07400399F79 /* StubGameService.swift in Sources */,
 				E42667702A43238500CF601B /* FreetogameTests.swift in Sources */,
+				E419CEC12A45EF9100399F79 /* GameDetailViewModelTests.swift in Sources */,
+				E419CEC62A45F2CB00399F79 /* StubGameRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

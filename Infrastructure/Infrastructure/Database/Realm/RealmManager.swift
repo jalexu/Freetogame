@@ -43,18 +43,18 @@ extension RealmManager: RealmManagerProtocol {
             .eraseToAnyPublisher()
     }
     
-    internal func fetchObject<T: Object>(plaqueId: String, _ type: T.Type) -> AnyPublisher<T?, Never> {
-        let predicate = NSPredicate(format: "plaqueId=%@", plaqueId)
+    internal func fetchObject<T: Object>(id: String, _ type: T.Type) -> AnyPublisher<T?, Never> {
+        let predicate = NSPredicate(format: "id=%@", id)
         let data = realm?.objects(type).filter(predicate).first
         return Just(data)
             .eraseToAnyPublisher()
     }
     
-    internal func delete<T: Object>(plaqueId: String, _ type: T.Type) -> AnyPublisher<Bool, Error> {
+    internal func delete<T: Object>(id: String, _ type: T.Type) -> AnyPublisher<Bool, Error> {
         return Future { [weak self] promise in
             do {
                 try self?.realm?.write {
-                    let predicate = NSPredicate(format: "id=%@", plaqueId)
+                    let predicate = NSPredicate(format: "id=%@", id)
                     let data = self?.realm?.objects(type).filter(predicate).first
                     if let object = data {
                         self?.realm?.delete(object)

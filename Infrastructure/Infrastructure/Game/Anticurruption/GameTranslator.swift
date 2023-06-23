@@ -77,7 +77,8 @@ struct GameTranslator {
                        isFavorite: true)
     }
     
-    static func fromGameDaoToGameDomain(game: GameDao) throws -> Domain.Game {
+    static func fromGameDaoToGameDomain(game: GameDao?) throws -> Domain.Game? {
+        guard let game = game else { return nil }
         return try Domain.Game(id: Int(game.id) ?? 0,
                                title: game.title,
                                thumbnail: game.thumbnail,

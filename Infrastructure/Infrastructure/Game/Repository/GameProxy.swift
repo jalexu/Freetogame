@@ -51,16 +51,8 @@ class GameProxy: GameRepository {
         .eraseToAnyPublisher()
     }
     
-    func saveFavoriteGame(game: Domain.GameDetail) -> AnyPublisher<Bool, Error> {
-        return gameLocalRepository.saveFavoriteGame(game: game)
-    }
-    
-    func deleteFavoriteGame(id: Int) -> AnyPublisher<Bool, Error> {
-        return gameLocalRepository.deleteFavoriteGame(id: id)
-    }
-    
-    func getFavoriteGames() -> AnyPublisher<[Domain.Game], Error> {
-        return gameLocalRepository.getFavoriteGames()
+    private func getFavoriteGame(id: Int) -> AnyPublisher<Domain.Game?, Error> {
+        return gameLocalRepository.getFavoriteGame(id: id)
     }
     
 }

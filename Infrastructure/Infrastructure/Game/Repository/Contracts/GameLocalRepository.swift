@@ -13,4 +13,5 @@ public protocol GameLocalRepository {
     func saveFavoriteGame(game: Domain.GameDetail) -> AnyPublisher<Bool, Error>
     func deleteFavoriteGame(id: Int) -> AnyPublisher<Bool, Error>
     func getFavoriteGames() -> AnyPublisher<[Domain.Game], Error>
+    func getFavoriteGame(id: Int) -> AnyPublisher<Domain.Game?, Error>
 }

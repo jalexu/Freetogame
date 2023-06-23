@@ -15,8 +15,10 @@ final class StubGameRemoteRepository: GameRemoteRepository {
     let games: [Infrastructure.Game]
     let gameDetail: Infrastructure.GameDetail
     
-    init(games: [Infrastructure.Game] = [Infrastructure.Game]()) {
+    init(games: [Infrastructure.Game] = [Infrastructure.Game](),
+         gameDetail: Infrastructure.GameDetail) {
         self.games = games
+        self.gameDetail = gameDetail
     }
     
     func getGames() throws -> AnyPublisher<[Domain.Game], Error> {

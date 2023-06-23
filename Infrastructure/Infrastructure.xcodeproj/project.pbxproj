@@ -19,6 +19,8 @@
 		E419CE972A44E55700399F79 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE962A44E55700399F79 /* GameDetail.swift */; };
 		E419CEB82A45D83700399F79 /* GameLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEB72A45D83700399F79 /* GameLocalRepository.swift */; };
 		E419CEBA2A45D85700399F79 /* GameRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEB92A45D85700399F79 /* GameRealmRepository.swift */; };
+		E419CEBC2A45E73B00399F79 /* StubRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEBB2A45E73B00399F79 /* StubRealmManager.swift */; };
+		E419CEBE2A45EB3B00399F79 /* StubGameLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEBD2A45EB3B00399F79 /* StubGameLocalRepository.swift */; };
 		E426671B2A4305E600CF601B /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42667122A4305E500CF601B /* Infrastructure.framework */; };
 		E42667212A4305E600CF601B /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = E42667152A4305E500CF601B /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42667352A430B7A00CF601B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667342A430B7A00CF601B /* Game.swift */; };
@@ -80,6 +82,8 @@
 		E419CE962A44E55700399F79 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		E419CEB72A45D83700399F79 /* GameLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocalRepository.swift; sourceTree = "<group>"; };
 		E419CEB92A45D85700399F79 /* GameRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRealmRepository.swift; sourceTree = "<group>"; };
+		E419CEBB2A45E73B00399F79 /* StubRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubRealmManager.swift; sourceTree = "<group>"; };
+		E419CEBD2A45EB3B00399F79 /* StubGameLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubGameLocalRepository.swift; sourceTree = "<group>"; };
 		E42667122A4305E500CF601B /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42667152A4305E500CF601B /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		E426671A2A4305E600CF601B /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -362,6 +366,8 @@
 			children = (
 				E42667DD2A435FD700CF601B /* StubNetworkVerify.swift */,
 				E42667DF2A43606200CF601B /* StubGameRemoteRepository.swift */,
+				E419CEBB2A45E73B00399F79 /* StubRealmManager.swift */,
+				E419CEBD2A45EB3B00399F79 /* StubGameLocalRepository.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -520,7 +526,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E419CEBE2A45EB3B00399F79 /* StubGameLocalRepository.swift in Sources */,
 				E42667DB2A435EDB00CF601B /* GameProxyTests.swift in Sources */,
+				E419CEBC2A45E73B00399F79 /* StubRealmManager.swift in Sources */,
 				E42667DE2A435FD700CF601B /* StubNetworkVerify.swift in Sources */,
 				E42667E02A43606200CF601B /* StubGameRemoteRepository.swift in Sources */,
 			);

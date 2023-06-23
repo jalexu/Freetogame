@@ -11,7 +11,6 @@ import Domain
 @_implementationOnly import RealmSwift
 
 class GameRealmRepository: GameLocalRepository {
-    
     private let realmManager: RealmManagerProtocol
     
     init(realmManager: RealmManagerProtocol) {
@@ -24,7 +23,7 @@ class GameRealmRepository: GameLocalRepository {
     }
     
     func deleteFavoriteGame(id: Int) -> AnyPublisher<Bool, Error> {
-        return realmManager.delete(plaqueId: String(id), GameDao.self)
+        return realmManager.delete(id: String(id), GameDao.self)
     }
     
     func getFavoriteGames() -> AnyPublisher<[Domain.Game], Error> {
@@ -40,5 +39,15 @@ class GameRealmRepository: GameLocalRepository {
         .eraseToAnyPublisher()
     }
     
-    
+    func getFavoriteGame(id: Int) -> AnyPublisher<Domain.Game?, Error> {
+        return realmManager.fetchObject(id: String(id), GameDao.self)
+            .tryMap { game  in
+                do {
+                    return try GameTranslator.fromGameDaoToGameDomain(game: game)
+                } catch {
+                    throw error
+                }
+            }
+            .eraseToAnyPublisher()
+    }
 }

@@ -14,15 +14,21 @@ final class GameProxyTests: XCTestCase {
     
     private var gameRemoteRepository: GameRemoteRepository!
     private var networkVerify: StubNetworkVerify!
+    private var stubGameRemoteRepository: StubGameRemoteRepository!
+    private var stubRealmManager: StubRealmManager!
     private var stub: GameProxy!
     private var cancellable: AnyCancellable?
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        gameRemoteRepository = StubGameRemoteRepository()
+        gameRemoteRepository = StubGameRemoteRepository(gameDetail: createGameDetail())
         networkVerify = StubNetworkVerify()
-        stub = GameProxy(gameRemoteRepository: gameRemoteRepository, networkVerify: networkVerify,
-                         realmManager: <#RealmManagerProtocol#>)
+        stubRealmManager = StubRealmManager()
+        stub = GameProxy(gameRemoteRepository: gameRemoteRepository,
+                         networkVerify: networkVerify,
+                         gameLocalRepository: StubGameLocalRepository(
+                            games: [],
+                            gameDetail: createGameDetail()))
     }
 
     override func tearDownWithError() throws {
@@ -78,6 +84,30 @@ final class GameProxyTests: XCTestCase {
                         developer: "R2 Games",
                         releaseDate: "2019-04-29",
                         freetogameProfileURL: "https://www.freetogame.com/the-third-age")
+    }
+    
+    private func createGameDetail() -> Infrastructure.GameDetail {
+        return Infrastructure.GameDetail(
+            id: 457,
+            title: "The Third Age",
+            thumbnail: "https://www.freetogame.com/g/457/thumbnail.jpg",
+            status: "good",
+            shortDescription: "A free-to-play browser-based Strategy MMO game focused on story-based PvE gameplay!",
+            description: "description",
+            gameURL: "https://www.freetogame.com/open/the-third-age",
+            genre: "Strategy",
+            platform: "Web Browser",
+            publisher: "R2 Games",
+            developer: "R2 Games",
+            releaseDate: "2019-04-29",
+            freetogameProfileURL: "https://www.freetogame.com/the-third-age",
+            minimumSystemRequirements: MinimumSystemRequirements(
+                os: "os",
+                processor: "processor",
+                memory: "memory",
+                graphics: "graphics",
+                storage: "storage"),
+            screenshots: [])
     }
 
 }
