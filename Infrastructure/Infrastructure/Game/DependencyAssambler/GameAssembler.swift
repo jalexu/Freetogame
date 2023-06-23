@@ -24,10 +24,15 @@ public class GameAssembler: Assembly {
         }
         .inObjectScope(.container)
         
+        container.register(GameLocalRepository.self) { resolver in
+            GameRealmRepository(realmManager: resolver.resolve(RealmManagerProtocol.self)!)
+        }
+        .inObjectScope(.container)
+        
         container.register(GameRepository.self) { resolver in
             GameProxy(gameRemoteRepository: resolver.resolve(GameRemoteRepository.self)!,
                       networkVerify: resolver.resolve(NetworkVerify.self)!,
-                      realmManager: resolver.resolve(RealmManagerProtocol.self)!)
+                      gameLocalRepository: resolver.resolve(GameLocalRepository.self)!)
         }
         .inObjectScope(.container)
     }

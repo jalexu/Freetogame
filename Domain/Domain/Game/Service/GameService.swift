@@ -31,4 +31,5 @@ public class GameService {
     public func getGameDatail(id: Int) -> AnyPublisher<GameDetail, Error> {
         return gameRepository.getGameDetail(id: id)
     }
+    
 }

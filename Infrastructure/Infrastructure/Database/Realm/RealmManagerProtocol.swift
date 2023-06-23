@@ -11,7 +11,7 @@ import Combine
 protocol RealmManagerProtocol {
     func save<T: Object>(object: T) -> AnyPublisher<Bool, Error>
     func fetchObjects<T: Object>(_ type: T.Type) -> AnyPublisher<[T], Never>
-    func fetchObject<T: Object>(plaqueId: String, _ type: T.Type) -> AnyPublisher<T?, Never>
-    func delete<T: Object>(plaqueId: String, _ type: T.Type) -> AnyPublisher<Bool, Error>
+    func fetchObject<T: Object>(id: String, _ type: T.Type) -> AnyPublisher<T?, Never>
+    func delete<T: Object>(id: String, _ type: T.Type) -> AnyPublisher<Bool, Error>
 }
 

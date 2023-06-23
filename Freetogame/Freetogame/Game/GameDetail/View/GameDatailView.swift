@@ -11,9 +11,13 @@ import Domain
 struct GameDatailView<ViewModel>: View where ViewModel: GameDetailObservable {
     
     @ObservedObject private var viewModel: ViewModel
+    @State private var isFavorited: Bool = false
+    private var reloadGames: () -> Void
     
-    init(viewModel: ViewModel) {
+    init(viewModel: ViewModel,
+         reloadGames: @escaping () -> Void) {
         self.viewModel = viewModel
+        self.reloadGames = reloadGames
     }
     
     @ViewBuilder
@@ -27,7 +31,6 @@ struct GameDatailView<ViewModel>: View where ViewModel: GameDetailObservable {
                 .font(.body)
                 .multilineTextAlignment(.leading)
         }
-        .padding(.horizontal)
     }
     
     @ViewBuilder
@@ -41,7 +44,6 @@ struct GameDatailView<ViewModel>: View where ViewModel: GameDetailObservable {
                     .font(.title3)
                     .fontWeight(.bold)
             }
-            .padding(.vertical)
             
             GalleryView(screenshots: screenshots)
         }
@@ -65,58 +67,85 @@ struct GameDatailView<ViewModel>: View where ViewModel: GameDetailObservable {
                     descriptionView(title: "Memory:", description: requirements?.memory ?? "")
                     descriptionView(title: "raphics:", description: requirements?.graphics ?? "")
                 }
-                .padding(.horizontal)
+                
             }
-            .padding(.vertical)
+    }
+    
+    func favoriteView(isFavorite: Bool) -> some View {
+        HStack {
+            Text("Mark like favorite")
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(.accentColor)
+                .padding(.leading)
             
-        
+            Spacer()
+            
+            Button {
+                isFavorited.toggle()
+                if isFavorited {
+                    viewModel.saveFavoriteGame()
+                } else {
+                    viewModel.deleteFavoriteGame()
+                    reloadGames()
+                }
+            } label: {
+                Image(systemName: isFavorited ? "star.fill" : "star")
+                    .font(.system(size: 20))
+                    .foregroundColor(.yellow)
+                    .padding(.trailing)
+            }
+            .onAppear{
+                isFavorited = isFavorite
+            }
+        }
+        .padding([.top, .bottom], 15)
     }
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            switch viewModel.state {
-            case .loading:
-                ProgressView()
-                    .tint(.primary)
-            case .success(let detail):
-                LazyVStack(alignment: .center, spacing: 20) {
-                    // Image game
-                    URLImageView(imageUrl: detail?.thumbnail ?? "")
-                    
-                    // Description
-                    Text(detail?.description ?? "")
-                        .font(.headline)
-                        .multilineTextAlignment(.leading)
-                        .padding(.horizontal)
-                    
-                    galleryImagesView(screenshots: detail?.screenshots ?? [])
-                        .padding(.horizontal)
-                    
-                    VStack(alignment: .leading, spacing: 20) {
-                        descriptionView(title: "Genre:", description: detail?.genre ?? "")
+            ScrollView(.vertical, showsIndicators: false) {
+                switch viewModel.state {
+                case .loading:
+                    ProgressView()
+                        .tint(.primary)
+                case .success(let detail):
+                    LazyVStack(alignment: .center, spacing: 20) {
+                        favoriteView(isFavorite: detail?.isfavorite ?? false)
+                        // Image game
+                        URLImageView(imageUrl: detail?.thumbnail ?? "")
                         
-                        descriptionView(title: "Platform:", description: detail?.platform ?? "")
+                        // Description
+                        Text(detail?.description ?? "")
+                            .font(.headline)
+                            .multilineTextAlignment(.leading)
                         
-                        descriptionView(title: "Publisher:", description: detail?.publisher ?? "")
+                        galleryImagesView(screenshots: detail?.screenshots ?? [])
                         
-                        descriptionView(title: "Release date:", description: detail?.releaseDate ?? "")
+                        VStack(alignment: .leading, spacing: 20) {
+                            descriptionView(title: "Genre:", description: detail?.genre ?? "")
+                            
+                            descriptionView(title: "Platform:", description: detail?.platform ?? "")
+                            
+                            descriptionView(title: "Publisher:", description: detail?.publisher ?? "")
+                            
+                            descriptionView(title: "Release date:", description: detail?.releaseDate ?? "")
+                            
+                            descriptionView(title: "GameURL:", description: detail?.gameURL ?? "")
+                        }
+                        .padding(.horizontal, 1)
                         
-                        descriptionView(title: "GameURL:", description: detail?.gameURL ?? "")
+                        sistemRequirementsView(requirements: detail?.minimumSystemRequirements)
                         
                     }
                     .padding(.horizontal)
-                    
-                    sistemRequirementsView(requirements: detail?.minimumSystemRequirements)
+                    .navigationBarTitle(detail?.title ?? "", displayMode: .inline)
+                case .failure(let error):
+                    Text(error.description)
                 }
-                .navigationBarTitle(detail?.title ?? "", displayMode: .inline)
-            case .failure(let error):
-                Text(error.description)
             }
-        }
-        .onAppear {
-            viewModel.getGameDetail()
-        }
-        
+            .onAppear {
+                viewModel.getGameDetail()
+            }
     }
 }
 
@@ -126,7 +155,7 @@ struct GameDatailView_Previews: PreviewProvider {
         NavigationView {
             GameDatailView(viewModel: DependencyInjectionContainer.shared.resolve(
                 GameDetailViewModel.self,
-                argument: 452)!)
+                arguments: 452, arg2: false)!,reloadGames: {})
         }
     }
 }

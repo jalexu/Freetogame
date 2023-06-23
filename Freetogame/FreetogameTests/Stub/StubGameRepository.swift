@@ -1,8 +1,8 @@
 //
 //  StubGameRepository.swift
-//  DomainTests
+//  FreetogameTests
 //
-//  Created by Jaime Alexander Uribe Uribe - Ceiba Software on 21/06/23.
+//  Created by Jaime Alexander Uribe Uribe - Ceiba Software on 23/06/23.
 //
 
 import Foundation

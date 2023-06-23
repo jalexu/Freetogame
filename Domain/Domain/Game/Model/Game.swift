@@ -18,6 +18,7 @@ public struct Game: Identifiable, Equatable {
     public let developer: String
     public var releaseDate: String
     public let freetogameProfileURL: String
+    public let isFavorite: Bool
     
     public init(
         id: Int,
@@ -30,7 +31,8 @@ public struct Game: Identifiable, Equatable {
         publisher: String,
         developer: String,
         releaseDate: String,
-        freetogameProfileURL: String) throws {
+        freetogameProfileURL: String,
+        isFavorite: Bool = false) throws {
             self.id = id
             self.title = title
             self.thumbnail = thumbnail
@@ -42,6 +44,7 @@ public struct Game: Identifiable, Equatable {
             self.developer = developer
             self.releaseDate = releaseDate.convertToDateFormat()
             self.freetogameProfileURL = freetogameProfileURL
+            self.isFavorite = isFavorite
             try validateFields()
         }
     

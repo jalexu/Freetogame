@@ -13,14 +13,14 @@ import Domain
 class GameProxy: GameRepository {
     private let gameRemoteRepository: GameRemoteRepository
     private let networkVerify: NetworkVerify
-    private let realmManager: RealmManagerProtocol
+    private let gameLocalRepository: GameLocalRepository
     
     init(gameRemoteRepository: GameRemoteRepository,
          networkVerify: NetworkVerify,
-         realmManager: RealmManagerProtocol) {
+         gameLocalRepository: GameLocalRepository) {
         self.gameRemoteRepository = gameRemoteRepository
         self.networkVerify = networkVerify
-        self.realmManager = realmManager
+        self.gameLocalRepository = gameLocalRepository
     }
     
     func getGames() -> AnyPublisher<[Domain.Game], Error> {
@@ -51,9 +51,8 @@ class GameProxy: GameRepository {
         .eraseToAnyPublisher()
     }
     
-    func saveFavoriteGame(game: Domain.Game) -> AnyPublisher<Bool, Error> {
-        let gameDao: Object = GameTranslator.fromGameToGameDao(game: game)
-        return realmManager.save(object: gameDao)
+    private func getFavoriteGame(id: Int) -> AnyPublisher<Domain.Game?, Error> {
+        return gameLocalRepository.getFavoriteGame(id: id)
     }
     
 }
