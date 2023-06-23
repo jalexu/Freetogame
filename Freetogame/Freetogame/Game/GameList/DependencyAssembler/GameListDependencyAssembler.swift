@@ -8,6 +8,7 @@
 import Foundation
 import Swinject
 import Domain
+import Infrastructure
 
 final class GameListDependencyAssembler: Assembly {
     func assemble(container: Container) {
@@ -17,7 +18,8 @@ final class GameListDependencyAssembler: Assembly {
         .inObjectScope(.container)
         
         container.register(GameListViewModel.self) { resolver in
-            GameListViewModel(gameService: resolver.resolve(GameService.self)!)
+            GameListViewModel(gameService: resolver.resolve(GameService.self)!,
+                              gameLocalRepository: resolver.resolve(GameLocalRepository.self)!)
         }
     }
     

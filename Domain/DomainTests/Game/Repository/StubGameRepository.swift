@@ -10,6 +10,9 @@ import Combine
 @testable import Domain
 
 struct StubGameRepository: GameRepository {
+    func getGameDetail(id: Int) -> AnyPublisher<Domain.GameDetail, Error> {
+        <#code#>
+    }
     
     var games: [Game] = []
     

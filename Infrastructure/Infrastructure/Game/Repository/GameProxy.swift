@@ -13,14 +13,14 @@ import Domain
 class GameProxy: GameRepository {
     private let gameRemoteRepository: GameRemoteRepository
     private let networkVerify: NetworkVerify
-    private let realmManager: RealmManagerProtocol
+    private let gameLocalRepository: GameLocalRepository
     
     init(gameRemoteRepository: GameRemoteRepository,
          networkVerify: NetworkVerify,
-         realmManager: RealmManagerProtocol) {
+         gameLocalRepository: GameLocalRepository) {
         self.gameRemoteRepository = gameRemoteRepository
         self.networkVerify = networkVerify
-        self.realmManager = realmManager
+        self.gameLocalRepository = gameLocalRepository
     }
     
     func getGames() -> AnyPublisher<[Domain.Game], Error> {
@@ -52,25 +52,15 @@ class GameProxy: GameRepository {
     }
     
     func saveFavoriteGame(game: Domain.GameDetail) -> AnyPublisher<Bool, Error> {
-        let gameDao: Object = GameTranslator.fromGameToGameDao(game: game)
-        return realmManager.save(object: gameDao)
+        return gameLocalRepository.saveFavoriteGame(game: game)
     }
     
     func deleteFavoriteGame(id: Int) -> AnyPublisher<Bool, Error> {
-        return realmManager.delete(plaqueId: String(id), GameDao.self)
+        return gameLocalRepository.deleteFavoriteGame(id: id)
     }
     
     func getFavoriteGames() -> AnyPublisher<[Domain.Game], Error> {
-        return realmManager.fetchObjects(GameDao.self).tryMap { games in
-            return try games.compactMap { dao in
-                do {
-                    return try GameTranslator.fromGameDaoToGameDomain(game: dao)
-                } catch {
-                   throw error
-                }
-            }
-        }
-        .eraseToAnyPublisher()
+        return gameLocalRepository.getFavoriteGames()
     }
     
 }

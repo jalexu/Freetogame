@@ -8,19 +8,23 @@
 import Foundation
 import Combine
 import Domain
+import Infrastructure
 
 final class GameDetailViewModel {
     private let gameService: GameService
+    private let gameLocalRepository: GameLocalRepository
     private let idGame: Int
     private let isFavorite: Bool
     private var cancellables = Set<AnyCancellable>()
-    @Published var state = ViewModelState<GameDetail>.loading
-    var gameDetail: GameDetail?
+    @Published var state = ViewModelState<Domain.GameDetail>.loading
+    var gameDetail: Domain.GameDetail?
     
     init(gameService: GameService,
+         gameLocalRepository: GameLocalRepository,
          idGame: Int,
          isFavorite: Bool) {
         self.gameService = gameService
+        self.gameLocalRepository = gameLocalRepository
         self.idGame = idGame
         self.isFavorite = isFavorite
     }
@@ -47,7 +51,7 @@ extension GameDetailViewModel: GameDetailObservable {
         guard let game = gameDetail, game.isfavorite == false else {
             return
         }
-        gameService.saveFavoriteGame(game: game)
+        gameLocalRepository.saveFavoriteGame(game: game)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 guard case .failure(let error) = completion else { return }
@@ -62,7 +66,7 @@ extension GameDetailViewModel: GameDetailObservable {
         guard let game = gameDetail, game.isfavorite == true else {
             return
         }
-        gameService.deleteFavoriteGame(id: game.id)
+        gameLocalRepository.deleteFavoriteGame(id: game.id)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 guard case .failure(let error) = completion else { return }

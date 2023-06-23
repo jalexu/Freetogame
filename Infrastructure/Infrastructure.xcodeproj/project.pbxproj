@@ -17,6 +17,8 @@
 		E419CE862A446A8C00399F79 /* GameDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE852A446A8C00399F79 /* GameDao.swift */; };
 		E419CE952A44E2F600399F79 /* GameDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE942A44E2F600399F79 /* GameDetailRequest.swift */; };
 		E419CE972A44E55700399F79 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CE962A44E55700399F79 /* GameDetail.swift */; };
+		E419CEB82A45D83700399F79 /* GameLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEB72A45D83700399F79 /* GameLocalRepository.swift */; };
+		E419CEBA2A45D85700399F79 /* GameRealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419CEB92A45D85700399F79 /* GameRealmRepository.swift */; };
 		E426671B2A4305E600CF601B /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42667122A4305E500CF601B /* Infrastructure.framework */; };
 		E42667212A4305E600CF601B /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = E42667152A4305E500CF601B /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42667352A430B7A00CF601B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42667342A430B7A00CF601B /* Game.swift */; };
@@ -76,6 +78,8 @@
 		E419CE852A446A8C00399F79 /* GameDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDao.swift; sourceTree = "<group>"; };
 		E419CE942A44E2F600399F79 /* GameDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailRequest.swift; sourceTree = "<group>"; };
 		E419CE962A44E55700399F79 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
+		E419CEB72A45D83700399F79 /* GameLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocalRepository.swift; sourceTree = "<group>"; };
+		E419CEB92A45D85700399F79 /* GameRealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRealmRepository.swift; sourceTree = "<group>"; };
 		E42667122A4305E500CF601B /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42667152A4305E500CF601B /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		E426671A2A4305E600CF601B /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +291,7 @@
 				E42667B92A4345D200CF601B /* Request */,
 				E42667BF2A4348BB00CF601B /* GameAlamofireRepository.swift */,
 				E42667C52A434E6700CF601B /* GameProxy.swift */,
+				E419CEB92A45D85700399F79 /* GameRealmRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				E42667BD2A4347DA00CF601B /* GameRemoteRepository.swift */,
+				E419CEB72A45D83700399F79 /* GameLocalRepository.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -484,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42667C42A4349F300CF601B /* GameTranslator.swift in Sources */,
+				E419CEB82A45D83700399F79 /* GameLocalRepository.swift in Sources */,
 				E42667D42A43591400CF601B /* TechnicalException.swift in Sources */,
 				E419CE952A44E2F600399F79 /* GameDetailRequest.swift in Sources */,
 				E42667D02A43578100CF601B /* LocalizationFramework+Bundle.swift in Sources */,
@@ -505,6 +512,7 @@
 				E419CE672A439ABC00399F79 /* HttpClientAssembler.swift in Sources */,
 				E419CE972A44E55700399F79 /* GameDetail.swift in Sources */,
 				E42667BE2A4347DA00CF601B /* GameRemoteRepository.swift in Sources */,
+				E419CEBA2A45D85700399F79 /* GameRealmRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

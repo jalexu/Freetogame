@@ -8,16 +8,19 @@
 import Foundation
 import Combine
 import Domain
+import Infrastructure
 
 final class GameListViewModel {
     private let gameService: GameService
+    private let gameLocalRepository: GameLocalRepository
     private var cancellables = Set<AnyCancellable>()
     var favoritesGames: [Domain.Game] = []
     @Published var state = ViewModelState<[Game]>.loading
- 
     
-    init(gameService: GameService) {
+    init(gameService: GameService,
+         gameLocalRepository: GameLocalRepository) {
         self.gameService = gameService
+        self.gameLocalRepository = gameLocalRepository
     }
 }
 
@@ -37,7 +40,7 @@ extension GameListViewModel: MovieDetailViewModelObservable {
     
     func getFavoriteGames() {
         state = .loading
-        gameService.getFavoriteGames()
+        gameLocalRepository.getFavoriteGames()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 guard case .failure(let error) = completion else { return }
