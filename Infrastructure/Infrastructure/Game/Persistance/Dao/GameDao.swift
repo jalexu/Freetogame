@@ -9,7 +9,7 @@ import Foundation
 @_implementationOnly import RealmSwift
 
 class GameDao: Object {
-    @Persisted var id: Int
+    @Persisted var id: String
     @Persisted var title: String
     @Persisted var thumbnail: String
     @Persisted var shortDescription: String
@@ -20,18 +20,20 @@ class GameDao: Object {
     @Persisted var developer: String
     @Persisted var releaseDate: String
     @Persisted var freetogameProfileURL: String
+    @Persisted var isFavorite: Bool
     
-    convenience init(id: Int,
-         title: String,
-         thumbnail: String,
-         shortDescription: String,
-         gameURL: String,
-         genre: String,
-         platform: String,
-         publisher: String,
-         developer: String,
-         releaseDate: String,
-         freetogameProfileURL: String) {
+    convenience init(id: String,
+                     title: String,
+                     thumbnail: String,
+                     shortDescription: String,
+                     gameURL: String,
+                     genre: String,
+                     platform: String,
+                     publisher: String,
+                     developer: String,
+                     releaseDate: String,
+                     freetogameProfileURL: String,
+                     isFavorite: Bool) {
         self.init()
         self.id = id
         self.title = title
@@ -44,5 +46,6 @@ class GameDao: Object {
         self.developer = developer
         self.releaseDate = releaseDate
         self.freetogameProfileURL = freetogameProfileURL
+        self.isFavorite = isFavorite
     }
 }

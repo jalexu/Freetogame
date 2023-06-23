@@ -31,4 +31,16 @@ public class GameService {
     public func getGameDatail(id: Int) -> AnyPublisher<GameDetail, Error> {
         return gameRepository.getGameDetail(id: id)
     }
+    
+    public func saveFavoriteGame(game: GameDetail) -> AnyPublisher<Bool, Error> {
+        return gameRepository.saveFavoriteGame(game: game)
+    }
+    
+    public func deleteFavoriteGame(id: Int) -> AnyPublisher<Bool, Error> {
+        return gameRepository.deleteFavoriteGame(id: id)
+    }
+    
+    public func getFavoriteGames() -> AnyPublisher<[Game], Error> {
+        return gameRepository.getFavoriteGames()
+    }
 }

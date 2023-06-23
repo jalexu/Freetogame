@@ -62,8 +62,8 @@ struct GameTranslator {
         return screens
     }
     
-    static func fromGameToGameDao(game: Domain.Game) -> GameDao {
-        return GameDao(id: game.id,
+    static func fromGameToGameDao(game: Domain.GameDetail) -> GameDao {
+        return GameDao(id: String(game.id),
                        title: game.title,
                        thumbnail: game.thumbnail,
                        shortDescription: game.shortDescription,
@@ -73,6 +73,22 @@ struct GameTranslator {
                        publisher: game.publisher,
                        developer: game.developer,
                        releaseDate: game.releaseDate,
-                       freetogameProfileURL: game.freetogameProfileURL)
+                       freetogameProfileURL: game.freetogameProfileURL,
+                       isFavorite: true)
+    }
+    
+    static func fromGameDaoToGameDomain(game: GameDao) throws -> Domain.Game {
+        return try Domain.Game(id: Int(game.id) ?? 0,
+                               title: game.title,
+                               thumbnail: game.thumbnail,
+                               shortDescription: game.shortDescription,
+                               gameURL: game.gameURL,
+                               genre: game.genre,
+                               platform: game.platform,
+                               publisher: game.publisher,
+                               developer: game.developer,
+                               releaseDate: game.releaseDate,
+                               freetogameProfileURL: game.freetogameProfileURL,
+                               isFavorite: game.isFavorite)
     }
 }

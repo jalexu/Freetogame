@@ -20,5 +20,399 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8C293E7-1831-413D-AD8A-4910FAD86839"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "saveFavoriteGame()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "F8C293E7-1831-413D-AD8A-4910FAD86839 - 68d6067e26569889"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in Freetogame.GameDetailViewModel.saveFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "F8C293E7-1831-413D-AD8A-4910FAD86839 - 2c90fc5c3d502c2b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Freetogame.GameDetailViewModel.saveFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "5291">
+               </Location>
+               <Location
+                  uuid = "F8C293E7-1831-413D-AD8A-4910FAD86839 - 2c90fc5c3d502c2b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Freetogame.GameDetailViewModel.saveFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "5327">
+               </Location>
+               <Location
+                  uuid = "F8C293E7-1831-413D-AD8A-4910FAD86839 - b13a92b7c2681464"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in Freetogame.GameDetailViewModel.saveFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "921">
+               </Location>
+               <Location
+                  uuid = "F8C293E7-1831-413D-AD8A-4910FAD86839 - 68d6067e265699d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in Freetogame.GameDetailViewModel.saveFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "F8C293E7-1831-413D-AD8A-4910FAD86839 - 68d6067e265699f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in Freetogame.GameDetailViewModel.saveFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "F8C293E7-1831-413D-AD8A-4910FAD86839 - 68d6067e26569e5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in Freetogame.GameDetailViewModel.saveFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0471EE68-1883-4FCB-9ECC-BADFF30AE8CE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/GameList/ViewModel/GameListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getFavoriteGames()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0471EE68-1883-4FCB-9ECC-BADFF30AE8CE - 150caeaaa8ad8360"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;Domain.Game&gt;) -&gt; () in Freetogame.GameListViewModel.getFavoriteGames() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameList/ViewModel/GameListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "0471EE68-1883-4FCB-9ECC-BADFF30AE8CE - 150caeaaa8ad8360"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;Domain.Game&gt;) -&gt; () in Freetogame.GameListViewModel.getFavoriteGames() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameList/ViewModel/GameListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4528A30E-A2EE-4CEA-BAAC-41A8D60E2C3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/FavoriteGame/FavoriteGameListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E18F7BA-5EF2-453D-8B40-6D335AAAC44B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/FavoriteGame/FavoriteGameListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5E18F7BA-5EF2-453D-8B40-6D335AAAC44B - 34c37cbfd5559eb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.NavigationStack&lt;SwiftUI.NavigationPath, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Domain.Game&gt;, Swift.Int, SwiftUI.NavigationLink&lt;Freetogame.GameListItemView, Freetogame.GameDatailView&lt;Freetogame.GameDetailViewModel&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.Text&gt; in Freetogame.FavoriteGameListView.body.getter : some"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/FavoriteGame/FavoriteGameListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "1064">
+               </Location>
+               <Location
+                  uuid = "5E18F7BA-5EF2-453D-8B40-6D335AAAC44B - 6dce4a8926c5e2b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Domain.Game&gt;, Swift.Int, SwiftUI.NavigationLink&lt;Freetogame.GameListItemView, Freetogame.GameDatailView&lt;Freetogame.GameDetailViewModel&gt;&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.NavigationStack&lt;SwiftUI.NavigationPath, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;Domain.Game&gt;, Swift.Int, SwiftUI.NavigationLink&lt;Freetogame.GameListItemView, Freetogame.GameDatailView&lt;Freetogame.GameDetailViewModel&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.Text&gt; in Freetogame.FavoriteGameListView.body.getter : some"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/FavoriteGame/FavoriteGameListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "125">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DF73E1E-B331-489A-A033-117C6C245666"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/FavoriteGame/FavoriteGameListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B70F67A-2A8A-434E-BEEA-6AD01A4C29E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "deleteFavoriteGame()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "177F36B2-CF93-4A35-92BE-1EEB09DAD01F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "deleteFavoriteGame()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "177F36B2-CF93-4A35-92BE-1EEB09DAD01F - d1e7d47e07af3861"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Freetogame.GameDetailViewModel.deleteFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "823">
+               </Location>
+               <Location
+                  uuid = "177F36B2-CF93-4A35-92BE-1EEB09DAD01F - d1e7d47e07af3861"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Freetogame.GameDetailViewModel.deleteFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "3502">
+               </Location>
+               <Location
+                  uuid = "177F36B2-CF93-4A35-92BE-1EEB09DAD01F - d1e7d47e07af3861"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Freetogame.GameDetailViewModel.deleteFavoriteGame() -&gt; ()"
+                  moduleName = "Freetogame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaime.uribe/Documents/Freetogame/Freetogame/Freetogame/Game/GameDetail/ViewModel/GameDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "3500">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C98FFD7C-C8E4-4D36-AF5C-8473A8CCBCCD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Infrastructure/Infrastructure/Database/Realm/RealmManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "delete(plaqueId:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8666CCEF-6AE0-4114-837A-AE833ED6AF9B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/GameList/View/GameListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E790EAF-8D6C-4744-A319-35700DA35B5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/GameList/View/GameListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5308157C-9C7A-4553-B37B-92F95F326CD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Freetogame/Freetogame/Game/GameList/View/GameListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

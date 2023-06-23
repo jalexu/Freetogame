@@ -10,4 +10,6 @@ import Domain
 protocol GameDetailObservable: ObservableObject {
     var state: ViewModelState<GameDetail> { get }
     func getGameDetail()
+    func saveFavoriteGame()
+    func deleteFavoriteGame()
 }

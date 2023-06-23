@@ -54,7 +54,7 @@ extension RealmManager: RealmManagerProtocol {
         return Future { [weak self] promise in
             do {
                 try self?.realm?.write {
-                    let predicate = NSPredicate(format: "plaqueId=%@", plaqueId)
+                    let predicate = NSPredicate(format: "id=%@", plaqueId)
                     let data = self?.realm?.objects(type).filter(predicate).first
                     if let object = data {
                         self?.realm?.delete(object)

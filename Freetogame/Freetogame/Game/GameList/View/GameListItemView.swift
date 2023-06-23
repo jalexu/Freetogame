@@ -28,12 +28,20 @@ struct GameListItemView: View {
                             RoundedRectangle(cornerRadius: 12)
                         )
                         .frame(width: 100, height: 100)
-                    Text(game.title)
-                        .multilineTextAlignment(.leading)
-                        .font(.title3)
-                        .fontWeight(.heavy)
-                        .padding(.leading, 1)
-                        .foregroundColor(.accentColor)
+                    VStack(spacing: 5) {
+                        if game.isFavorite {
+                            Image(systemName:"star.fill")
+                                .font(.system(size: 12))
+                                .foregroundColor(.yellow)
+                        }
+                        Text(game.title)
+                            .multilineTextAlignment(.leading)
+                            .font(.title3)
+                            .fontWeight(.heavy)
+                            .padding(.leading, 1)
+                            .foregroundColor(.accentColor)
+                    }
+                    
                 }
                 
                 Text(game.shortDescription)

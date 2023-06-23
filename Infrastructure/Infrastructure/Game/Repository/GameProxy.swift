@@ -51,9 +51,26 @@ class GameProxy: GameRepository {
         .eraseToAnyPublisher()
     }
     
-    func saveFavoriteGame(game: Domain.Game) -> AnyPublisher<Bool, Error> {
+    func saveFavoriteGame(game: Domain.GameDetail) -> AnyPublisher<Bool, Error> {
         let gameDao: Object = GameTranslator.fromGameToGameDao(game: game)
         return realmManager.save(object: gameDao)
+    }
+    
+    func deleteFavoriteGame(id: Int) -> AnyPublisher<Bool, Error> {
+        return realmManager.delete(plaqueId: String(id), GameDao.self)
+    }
+    
+    func getFavoriteGames() -> AnyPublisher<[Domain.Game], Error> {
+        return realmManager.fetchObjects(GameDao.self).tryMap { games in
+            return try games.compactMap { dao in
+                do {
+                    return try GameTranslator.fromGameDaoToGameDomain(game: dao)
+                } catch {
+                   throw error
+                }
+            }
+        }
+        .eraseToAnyPublisher()
     }
     
 }

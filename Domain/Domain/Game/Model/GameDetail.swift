@@ -5,7 +5,7 @@
 //  Created by Jaime Alexander Uribe Uribe - Ceiba Software on 22/06/23.
 //
 
-public struct GameDetail: Codable, Equatable {
+public struct GameDetail: Codable, Equatable, Identifiable {
     public let id: Int
     public let title: String
     public let thumbnail: String
@@ -16,6 +16,7 @@ public struct GameDetail: Codable, Equatable {
     public let freetogameProfileURL: String
     public let minimumSystemRequirements: MinimumSystemRequirements
     public let screenshots: [Screenshot]
+    public var isfavorite: Bool
     
     public init(
         id: Int,
@@ -32,7 +33,8 @@ public struct GameDetail: Codable, Equatable {
         releaseDate: String,
         freetogameProfileURL: String,
         minimumSystemRequirements: MinimumSystemRequirements,
-        screenshots: [Screenshot]) throws {
+        screenshots: [Screenshot],
+        isfavorite: Bool = false) throws {
             self.id = id
             self.title = title
             self.thumbnail = thumbnail
@@ -48,6 +50,7 @@ public struct GameDetail: Codable, Equatable {
             self.freetogameProfileURL = freetogameProfileURL
             self.minimumSystemRequirements = minimumSystemRequirements
             self.screenshots = screenshots
+            self.isfavorite = isfavorite
             try validateFields()
         }
     

@@ -6,8 +6,11 @@
 //
 
 import Domain
+import SwiftUI
 
 protocol MovieDetailViewModelObservable: ObservableObject {
     var state: ViewModelState<[Game]> { get }
+    var favoritesGames: [Game] { get set }
     func getGames()
+    func getFavoriteGames()
 }

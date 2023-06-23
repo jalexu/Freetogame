@@ -11,8 +11,10 @@ import Domain
 
 final class GameDetailDependencyAssembler: Assembly {
     func assemble(container: Container) {
-        container.register(GameDetailViewModel.self) { (resolver, idGame: Int) in
-            GameDetailViewModel(gameService: resolver.resolve(GameService.self)!, idGame: idGame)
+        container.register(GameDetailViewModel.self) { (resolver, idGame: Int, isFavorite: Bool) in
+            GameDetailViewModel(gameService: resolver.resolve(GameService.self)!,
+                                idGame: idGame,
+                                isFavorite: isFavorite)
         }
     }
     

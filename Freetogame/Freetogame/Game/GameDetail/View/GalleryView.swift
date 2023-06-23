@@ -26,7 +26,7 @@ struct GalleryView: View {
         }
     }
 }
-
+#if DEBUG
 struct GalleryView_Previews: PreviewProvider {
     static let screenshots = [Screenshot(
         id: 2,
@@ -35,3 +35,4 @@ struct GalleryView_Previews: PreviewProvider {
         GalleryView(screenshots: screenshots)
     }
 }
+#endif

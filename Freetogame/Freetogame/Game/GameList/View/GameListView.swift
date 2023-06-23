@@ -7,9 +7,13 @@
 
 import SwiftUI
 import Domain
+import Infrastructure
 
 struct GameListView<ViewModel>: View where ViewModel: MovieDetailViewModelObservable {
     
+    @State private var searchText = ""
+    @State private var isSearching = false
+    @State private var selectedTab: Int = 0
     @ObservedObject private var viewModel: ViewModel
     
     init(viewModel: ViewModel) {
@@ -18,23 +22,32 @@ struct GameListView<ViewModel>: View where ViewModel: MovieDetailViewModelObserv
     
     func listContentView(games: [Game]) -> some View {
         NavigationStack {
-            List(games) { game in
-                NavigationLink {
-                    GameDatailView(
-                        viewModel:DependencyInjectionContainer.shared.resolve(
-                            GameDetailViewModel.self,
-                            argument: game.id)!
-                    )
-                } label: {
-                    GameListItemView(game: game)
+            if !games.isEmpty {
+                VStack {
+                    SearchBar(searchText: $searchText,isSearching: $isSearching)
+                        .padding(.top)
+                    
+                    List(filteredItems(games: games)) { game in
+                        NavigationLink {
+                            GameDatailView(viewModel:
+                                            DependencyInjectionContainer.shared.resolve(
+                                                GameDetailViewModel.self,
+                                                arguments: game.id, arg2: game.isFavorite)!) {
+                                                    viewModel.getFavoriteGames()
+                                                }
+                        } label: {
+                            GameListItemView(game: game)
+                        }
+                    }
                 }
-                
+            } else {
+                Text("La lista de favoritos esta vacia")
             }
         }
     }
     
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             switch viewModel.state {
             case .loading:
                 ProgressView()
@@ -44,18 +57,38 @@ struct GameListView<ViewModel>: View where ViewModel: MovieDetailViewModelObserv
                     .tabItem {
                         Label("Games", systemImage: "list.dash")
                     }
-                Text("Hola")
+                    .tag(1)
+                listContentView(games: games ?? [])
                     .tabItem {
                         Label("Favoritos", systemImage: "star")
                     }
+                    .tag(2)
             case .failure(error: let error):
                 Text(error.description)
+                    .onAppear {
+                        selectedTab = 2
+                    }
             }
         }
         .onAppear {
             viewModel.getGames()
         }
+        .onChange(of: selectedTab, perform: { newValue in
+            if selectedTab == 2 {
+                viewModel.getFavoriteGames()
+            } else {
+                viewModel.getGames()
+            }
+        })
         .navigationBarTitle("Games")
+    }
+    
+    private func filteredItems(games: [Game]) -> [Game] {
+        if searchText.isEmpty {
+            return games
+        } else {
+            return games.filter { $0.genre.localizedCaseInsensitiveContains(searchText) }
+        }
     }
 }
 
