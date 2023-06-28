@@ -31,7 +31,7 @@ La aplicación muestra en detalle la información de cada juego seleccionado.
 La aplicación permite filtrar por genero del video juego.
 
 ## Arquitectura
-Se propuso como arquitectura para el proyecto una arquitectura limpia usando DDD (enfocada en el modelo de dominio) y en el apartado de aplicación se usa BLoC 
+Se propuso como arquitectura para el proyecto una arquitectura limpia usando DDD (enfocada en el modelo de dominio).
 
 Se usa el diseño guiado por el dominio ya que provee una estructura de prácticas y terminologías para tomar decisiones de diseño que enfoquen y aceleren el manejo de dominios complejos en los proyectos de software. 
 
